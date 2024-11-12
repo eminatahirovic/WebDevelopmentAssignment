@@ -137,5 +137,133 @@ h2{
 }
 
 font{
-    color: rebeccapurple;
+    color: white;
 }
+
+.cover{
+    background-size: cover;
+   position: absolute;
+   right: 0%;
+}
+
+.text{
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    width: 460px;
+    word-spacing: 6px;
+    font-weight: normal;
+    line-height: 72px;
+
+}
+
+form input[type="submit"] {
+    position: absolute;
+    top: 95%;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: gray;
+    border: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form input[type="submit"]:hover {
+    background-color: lightgray;    
+}
+
+.image-man{
+    position: absolute;
+    left: 10%;
+    top: 100%;
+    border: 1px solid darkgray;
+    box-shadow: 1px 2px 4px;
+}
+
+h6{
+    color: black;
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    border: 1px solid whitesmoke;
+    width: 200px;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    font-weight: normal;
+    text-align: center;
+}
+
+.image-man:hover{
+    box-shadow: 1px 3px 9px;
+}
+
+.image-woman{
+    position: absolute;
+    left: 40%;
+    top: 100%;
+    border: 1px solid darkgray;
+    box-shadow: 1px 2px 4px;
+}
+.image-woman:hover{
+    box-shadow: 1px 3px 9px;
+}
+
+h{
+    color: black;
+    position: absolute;
+    left: 20%;
+    top: 55%;
+    border: 1px solid whitesmoke;
+    width: 200px;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    font-weight: normal;
+    text-align: center;
+}
+
+.image-kids{
+    position: absolute;
+    left: 70%;
+    top: 100%;
+    border: 1px solid darkgray;
+    box-shadow: 1px 2px 4px;
+}
+
+.image-kids:hover{
+    box-shadow: 1px 3px 9px;
+}
+
+.t{
+    
+        color: black;
+        position: absolute;
+        left: 20%;
+        top: 55%;
+        border: 1px solid whitesmoke;
+        width: 200px;
+        font-size: 40px;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: white;
+        font-weight: normal;
+        text-align: center;
+    
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+
+
