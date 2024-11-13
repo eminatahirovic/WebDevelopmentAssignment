@@ -140,17 +140,18 @@ font{
     color: rebeccapurple;
 }
 
-.mensnavbar{
+.womensnavbar{
         display: inline;
         text-align: center;
       
 }
 
+
 ul {
     margin: 0px;
     padding: 0px;
 }
- 
+
 
 *, *:before, *:after {
     box-sizing: border-box;
