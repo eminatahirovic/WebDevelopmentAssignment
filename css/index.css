@@ -142,7 +142,7 @@ font{
 
 .text{
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 8%;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -173,16 +173,17 @@ form input[type="submit"]:hover {
     background-color: lightgray;    
 }
 
-.container{
-  margin: 100px 0 0 200px;
+.container-images{
+
+  margin: 100px 70px 0px 200px;
   width: 70%;
+  justify-content: flex-end;
   height: 450px;
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 
-.container img{
+.container-images img{
   width: 10%;
   height: 100%;
   object-fit: cover;
@@ -191,10 +192,9 @@ form input[type="submit"]:hover {
   transition: all ease-in-out 0.5s;
 }
 
-.container img:hover {
+.container-images img:hover {
   width: 25%;
 }
-
 
 
 .t{

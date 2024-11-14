@@ -1,15 +1,3 @@
-.offline-message{
-    display: none;
-    position: fixed;
-    left: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    z-index: 1000;
-    padding: 10px;
-}
 
 .box1 { 
     border: 1px solid black;
@@ -17,10 +5,6 @@
     height: 30px;
     padding: 20px;
     display: flex;
-}
-
-.images:hover {
-  background-color: pink;
 }
 
 ul{
@@ -141,18 +125,95 @@ h2{
 }
 
 font{
-    color: rebeccapurple;
+    color: white;
 }
 
-.mensnavbar{
-        display: inline;
-        text-align: center;
-      
+.text{
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-ul {
-    margin: 0px;
-    padding: 0px;
+h1{
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    width: 460px;
+    word-spacing: 6px;
+    font-weight: normal;
+    line-height: 72px;
+
+}
+
+form input[type="submit"] {
+    position: absolute;
+    top: 95%;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: gray;
+    border: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form input[type="submit"]:hover {
+    background-color: lightgray;    
+}
+
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, .table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.table table-hover{
+    border: 1px solid;
+}
+
+.map{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.about-us-title{
+align-items: center;
+display: flex;
+flex-direction: column;
+font-size: 50px;
+}
+
+.shopping-experience{
+    align-items: center;
+    display: inline;
+    white-space: nowrap;
+    justify-content: center;
+    text-align: center;
+    margin: 0%;
+    font-size: 50px;
+}
+
+h1{ 
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    word-spacing: 6px;
+    font-weight: normal;
+    line-height: 72px;
+}
+.intro-text{
+    margin: 1px solid;
 }
 
 
@@ -306,4 +367,3 @@ ul {
   .emailbutton{
     text-decoration: underline;
   }
- 
