@@ -1,0 +1,22 @@
+.modal-dialog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-modal-box{
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba (0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: lightgray;
+}
+
+.custom-modal-box .modal-header{
+    border-bottom: 2px solid black;
+}
+
+.custom-modal-box .modal-footer{
+    border-top: 2px solid black;
+}
+

@@ -18,6 +18,9 @@
     padding: 20px;
     display: flex;
 }
+h5{
+  color: white;
+}
 
 ul{
     float: left;
@@ -336,10 +339,6 @@ ul {
   .legal__links {
     display: flex;
     align-items: center;
-  }
-  
-  .heart {
-    color: #2f2f2f;
   }
   
   @media screen and (min-width: 24.375em) {
