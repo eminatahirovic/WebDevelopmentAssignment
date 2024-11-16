@@ -1,3 +1,13 @@
+button a {
+  text-decoration: none;
+}
+
+.upper-nav {
+  display: flex;
+  flex-direction: column;
+
+}
+
 .offline-message{
     display: none;
     position: fixed;
@@ -18,9 +28,6 @@
     padding: 20px;
     display: flex;
 }
-h5{
-  color: white;
-}
 
 ul{
     float: left;
@@ -34,7 +41,7 @@ ul li{
     left: 300%;
     width: 100px;
     font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     list-style-type: none;
 
 }
@@ -45,13 +52,13 @@ ul li a{
 }
 
 
-h5{
+.free-shipping {
     margin-top: 10px;
     color: white;
     justify-self: center;
     align-self: center;
     position: relative;
-    left: -18%;
+    left: -19%;
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
     font-size: 14px;
@@ -61,11 +68,11 @@ h5{
 .subbox{
     border: 1px solid transparent;
     background-color: whitesmoke;
-    height: auto;
+    height: 70%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 5%;
+    gap: 2%;
 }
 .background {
     padding-top: 10px;
@@ -75,6 +82,39 @@ h5{
     width: 70%;
     padding-top: 15px;
 }
+
+/* Container for icons */
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+}
+
+/* General icon styling */
+.icons i {
+  font-size: 24px; /* Size of the icons */
+  color: #333;     /* Default color */
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for icons */
+.icons i:hover {
+  color: #007bff;      /* Change color on hover */
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* For smaller screens */
+@media (max-width: 576px) {
+  .icon {
+    gap: 15px;       /* Reduce spacing for smaller screens */
+  }
+  .icon i {
+    font-size: 20px; /* Adjust icon size for mobile */
+  }
+}
+
 ol{
     float: left;
     display: flex;
@@ -101,6 +141,9 @@ ol li a:hover{
     border-bottom: 4px solid red;
 }
 
+ .icon {
+  background-color: rebeccapurple;
+}
 .fa-search{
     position: absolute;
     left: 82%;
@@ -130,13 +173,13 @@ ol li a:hover{
 
 }
 
-h2{
+ .shopping-web{
     position: relative;
     left: -61.8;
     text-transform: uppercase;
     font-family: 'Courier New', Courier, monospace;
     margin-top: 4px ;
-    font-weight: bolder;
+    font-weight: 100;
 }
 
 font{
@@ -234,8 +277,6 @@ ul {
   body {
     font-family: acumin-pro, system-ui, sans-serif;
     margin: 0;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
     font-size: 14px;
     background-color: #f4f4f4;
     align-items: start;
@@ -253,18 +294,28 @@ ul {
   
   .footer > * {
     flex:  1 100%;
+    padding: 20px;
   }
-  
-  .footer__addr {
-    margin-right: 1.25em;
-    margin-bottom: 2em;
+
+  .footer-wrap {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding-bottom: 0;
+  }
+.footer-bottom {
+  margin-top: 0;
+}
+  .video-commercial {
+    
+    width: 50%;
   }
   
   .footer__logo {
     font-family: 'Pacifico', cursive;
     font-weight: 400;
     text-transform: lowercase;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   
   .footer__addr h2 {
@@ -293,7 +344,7 @@ ul {
     border-radius: 100px;
     color: #2f2f2f;
     line-height: 0;
-    margin: 0.6em 0;
+    margin-top: 10px;
     font-size: 1rem;
     padding: 0 1.3em;
   }
