@@ -8,19 +8,6 @@ button a {
 
 }
 
-.offline-message{
-    display: none;
-    position: fixed;
-    left: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    z-index: 1000;
-    padding: 10px;
-}
-
 .box1 { 
     border: 1px solid black;
     background-color: black;
@@ -83,7 +70,6 @@ ul li a{
     padding-top: 15px;
 }
 
-/* Container for icons */
 .icons {
   display: flex;
   align-items: center;
@@ -91,27 +77,26 @@ ul li a{
   background-color: #007bff;
 }
 
-/* General icon styling */
 .icons i {
-  font-size: 24px; /* Size of the icons */
-  color: #333;     /* Default color */
+  font-size: 24px; 
+  color: #333; 
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect for icons */
+
 .icons i:hover {
-  color: #007bff;      /* Change color on hover */
-  transform: scale(1.2); /* Slight zoom effect on hover */
+  color: #007bff;     
+  transform: scale(1.2); 
 }
 
-/* For smaller screens */
+
 @media (max-width: 576px) {
   .icon {
-    gap: 15px;       /* Reduce spacing for smaller screens */
+    gap: 15px;     
   }
   .icon i {
-    font-size: 20px; /* Adjust icon size for mobile */
+    font-size: 20px; 
   }
 }
 
@@ -307,7 +292,6 @@ ul {
   margin-top: 0;
 }
   .video-commercial {
-    
     width: 50%;
   }
   
@@ -390,30 +374,6 @@ ul {
   .legal__links {
     display: flex;
     align-items: center;
-  }
-  
-  @media screen and (min-width: 24.375em) {
-    .legal .legal__links {
-      margin-left: auto;
-    }
-  }
-  
-  @media screen and (min-width: 40.375em) {
-    .footer__nav > * {
-      flex: 1;
-    }
-    
-    .nav__item--extra {
-      flex-grow: 2;
-    }
-    
-    .footer__addr {
-      flex: 1 0px;
-    }
-    
-    .footer__nav {
-      flex: 2 0px;
-    }
   }
 
   .emailbutton{

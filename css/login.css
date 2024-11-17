@@ -1,4 +1,3 @@
-/* General section styling */
 section {
   background-color: #f7f9fc;
   padding: 40px;
@@ -7,8 +6,6 @@ section {
   max-width: 600px;
   margin: 40px auto;
 }
-
-/* Pills navigation styles */
 .nav-pills {
   background-color: #fff;
   border-radius: 8px;
@@ -39,7 +36,6 @@ section {
   color: #0056b3;
 }
 
-/* Tab content area */
 .tab-content {
   background-color: #ffffff;
   padding: 30px;
@@ -48,7 +44,6 @@ section {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* Form styles */
 form {
   max-width: 500px;
   margin: auto;
@@ -84,7 +79,7 @@ form {
   color: #007bff;
 }
 
-/* Social buttons */
+
 .btn-floating {
   background-color: #f7f7f7;
   border-radius: 50%;
@@ -96,26 +91,25 @@ form {
 }
 
 .btn-floating:hover {
-  background-color: #007bff;
+  background-color: gray;
   color: #ffffff;
   transform: translateY(-2px);
 }
 
-/* Sign-in and Register buttons */
+
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: gray;
+  border-color: gray;
   border-radius: 50px;
   padding: 10px 20px;
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+  background-color: lightgray;
+  border-color: gray;
 }
 
-/* Checkbox styles */
 .form-check-input:checked {
   background-color: #007bff;
   border-color: #007bff;
@@ -125,9 +119,9 @@ form {
   cursor: pointer;
 }
 
-/* Links styling */
+
 a {
-  color: #007bff;
+  color: gray;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -137,7 +131,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Styling for social media buttons */
 .btn-floating {
   width: 45px;
   height: 45px;
@@ -157,13 +150,13 @@ a:hover {
   transition: color 0.3s ease;
 }
 
-/* Hover effect for social media buttons */
+
 .btn-floating:hover {
   background-color: #007bff;
   border-color: #007bff;
 }
 
-/* Facebook button */
+
 .btn-facebook {
   background-color: #3b5998;
   border-color: #3b5998;
@@ -177,7 +170,7 @@ a:hover {
   background-color: #2d4373;
 }
 
-/* Google button */
+
 .btn-google {
   background-color: #db4a39;
   border-color: #db4a39;
@@ -191,7 +184,7 @@ a:hover {
   background-color: #c23321;
 }
 
-/* Twitter button */
+
 .btn-twitter {
   background-color: #55acee;
   border-color: #55acee;
@@ -205,7 +198,7 @@ a:hover {
   background-color: #2795e9;
 }
 
-/* Github button */
+
 .btn-github {
   background-color: #333333;
   border-color: #333333;
@@ -219,18 +212,19 @@ a:hover {
   background-color: #24292e;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  section {
-    padding: 20px;
-  }
 
-  .nav-pills {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .btn-primary {
-    width: 100%;
-  }
+.weekly-emails-message legend {
+  width: auto;
+  height: auto;
+  margin: 5px auto;
+  padding: 6px;
+  background-color: white;
+  font-size: 15px!important;
 }
+
+
+ 
+
+
+
+
