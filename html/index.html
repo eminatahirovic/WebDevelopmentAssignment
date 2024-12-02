@@ -1,65 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Website</title>
-    <link rel="stylesheet" href="../css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" href="bootstrap.css"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping Website</title>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/mensmedia.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      </head>
+
+
+    <body>
+        
+      <div class="upper-nav">
+        <div class="box1">
+          <nav>
+             <ul>
+                <li><a href="">USD</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+                <li><a href="">English</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+                <li><a href="login.html">My Account</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+            </ul> 
+                
+          </nav>
+           <h5 class="free-shipping">Free shipping on all orders over $100</h5>
+        </div>
+      
+        <div class="subbox">
+          <div class="background">
+              <h2 class="shopping-web">Shopping Website</h2>
+          </div>
+      
+          <div class="list">
+              <ol>
+                  <li><a href="/html/index.html" target="_blank">Home</a></li>
+                  <li><a href="/html/men's.html" target="_blank">Men's</a></li>
+                  <li><a href="/html/women's.html" target="_blank">Women's</a></li>
+                  <li><a href="/html/teens.html" target="_blank">Teens</a></li>
+                  <li><a href="/html/aboutus.html" target="_blank">About us</a></li>
+              </ol>
+          </div>
+      
+          <div class="icons">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </div>
+        </div>      
     
-</body>
+
+        <div class="text">
+          <div class="container mt-3">
+            <h3><b>Get 10% off your next order!</b></h3>
+            <p>Sign up to get updated on the latest news! </p>
+          
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+              Register me!
+            </button>
+          </div>
+            
+          <!-- part from bootstrap-->
+          
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog modal-fullscreen-sm-down">
+              <div class="modal-content" custom-modal-box>
+          
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Register </h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <p>Let's go! </p>
+                </div>
+          
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    <a href="login.html">
+                    Let's go!
+                    </a>
+                  </button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="container-images">
+          <img src="https://static.sinsay.com/media/catalog/product/cache/1200/a4e40ebdc3e371adff845072e1c73f37/7/1/719BR-00X-001-1-890011.jpg" alt="mens1.jpg">
+          <img src="https://static.sinsay.com/media/catalog/product/5/0/500EG-MLC-002-1-899713_4.jpg" alt="women's1.jpeg">
+          <img src="https://static.sinsay.com/media/catalog/product/cache/1200/a4e40ebdc3e371adff845072e1c73f37/9/8/987BA-38X-001-1-876422.jpg" alt="girls.jpeg">
+        </div>
+
+
+    
+
+
+        <footer class="footer" id="footer">
+          <div class="footer-wrap"> 
+            <div class="footer__addr">
+              <h1 class="footer__logo">Thank you for visiting SHOPPING WEBSITE! <hr> Emina Tahirović <hr> Introduction to Web Development <hr></h1> 
+                  
+              <h2>Contact 033-122-122</h2>
+              
+              <address>
+                Vrbanja 1, Sarajevo 71000<br>
+                    
+                <a class="footer__btn" href="mailto:example@gmail.com" target="_blank">Email Us</a>
+              </address>
+            </div>
+        
+            <div class="video-commercial" width="420" height="315s">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/fr9iyP3Dy5A?si=zNF3Svmh2clsjxAD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+    
+          <div class="footer-b">
+            <div class="legal">
+              <p>&copy; 2024 All rights reserved.</p>
+            </div>
+            <div class="professoremail">
+              <a class="emailbutton" href="mailto:amela.vatres@stu.ibu.edu.ba" target="_blank">Email prof. Amela Vatreš Mudželet</a>
+            </div>
+            </div>
+          </footer>
+    </body>
 </html>
 
-<div id="offline-message" class="offline-message">
-    You are currently offline. Please check your internet connection.
-</div>
 
-<div class="box1">
-    <ul>
-        <li><a href="">USD</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
-        <li><a href="">English</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
-        <li><a href="login.html">My Account</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
-    </ul> 
-        <h5>Free shipping on all orders over $100</h5>
-
-    
-</div>
-
-<div class="subbox">
-    <div class="background">
-        <h2>Shopping<font>Website</font></h2>
-    </div>
-
-    <div class="list">
-    <ol>
-    <li><a href="">Home</a></li>
-    <li><a href="">Shop</a></li>
-    <li><a href="">Men's</a></li>
-    <li><a href="">Women's</a></li>
-    <li><a href="">Kids</a></li>
-    <li><a href="">Contact</a></li>
-    </ol>
-
-    <div class="icon">
-    <i class="fa fa-search" aria-hidden="true"></i>
-    <i class="fa fa-user" aria-hidden="true"></i>
-
-        <div class="icon">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        </div>
-
-        <div class="cover">
-            <img src="" alt="">
-
-        </div>
-
-    </div>
-</div>
-</div>
 
 
 

@@ -1,37 +1,176 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and registration form</title>
-    <link rel="stylesheet" href="../css/login.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login and registration form</title>
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/men's.css">
+        <link rel="stylesheet" href="../css/mensmedia.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    </head>
+<body>  
     
-    <div class="wrapper">
-        <form action="">
-            <h1>LOGIN</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username" required>
-                <box-icon type='solid' name='user'></box-icon>
-            </div>
+    <div class="upper-nav">
+      <div class="box1">
+        <nav>
+           <ul>
+              <li><a href="">USD</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+              <li><a href="">English</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+              <li><a href="login.html">My Account</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+          </ul> 
+              
+        </nav>
+         <h5 class="free-shipping">Free shipping on all orders over $100</h5>
+      </div>
+    
+      <div class="subbox">
+          <div class="background">
+              <h2 class="shopping-web">Shopping Website</h2>
+          </div>
+      
+          <div class="list">
+          <ol>
+            <li><a href="/html/index.html" target="_blank">Home</a></li>
+            <li><a href="/html/men's.html" target="_blank">Men's</a></li>
+            <li><a href="/html/women's.html" target="_blank">Women's</a></li>
+            <li><a href="/html/teens.html" target="_blank">Teens</a></li>
+            <li><a href="/html/aboutus.html" target="_blank">About us</a></li>
+          </ol>
+      
 
-            <div class="input-box">
-                <input type="password" placeholder="Password" required>
-                <box-icon name='lock-alt' type='solid' ></box-icon>
+          <div class="icons">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      </div>
             </div>
-
-            <div class="remember-forgot">
-                <label> <input type="checkbox">Remember me</label>
-                <a href="">Forgot password?</a>
-            </div>
-
-            <button type="submit" class="btn">Login</button>
-            <div class="register-link">
-                <p>Don't have an account yet? <a href="registerme.html">Register Me</a></p>
-            </div>
-        </form>
+          </div>
+        </div>
 
     </div>
+  
+
+    <section>
+    <div>
+
+
+<!--  content -->
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+    <form>
+      <div class="text-center mb-3">
+        <p>Sign in with:</p>
+        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+
+        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-google"></i>
+        </button>
+
+        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-twitter"></i>
+        </button>
+
+        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-github"></i>
+        </button>
+      </div>
+
+      <p class="text-center">or:</p>
+
+      <!-- Email input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="email" id="loginName" class="form-control"  required/>
+        <label class="form-label" for="loginName">Email or username</label>
+      </div>
+
+      <!-- Password input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="password" id="loginPassword" class="form-control" minlength="8" maxlength="15" />
+        <label class="form-label" for="loginPassword" aria-required="true">Password</label>
+      </div>
+
+      <!-- 2 column grid layout -->
+      <div class="row mb-4">
+        <div class="col-md-6 d-flex justify-content-center">
+          <!-- Checkbox -->
+          <div class="form-check mb-3 mb-md-0">
+            <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+            <label class="form-check-label" for="loginCheck"> Remember me </label>
+          </div>
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-center">
+          <!-- Simple link -->
+          <a href="#!">Forgot password?</a>
+        </div>
+      </div>
+
+       <!-- do you allow us to send you weekly updates -->
+      <div class="weekly-emails-message">
+        <form action="">
+          <fieldset>
+            <legend> <p> Sign up to recieve weekly email with exclusive content and offers.</p> <hr>
+              <b>Do you agree to recieve these emails?</b>
+            </legend>
+           <input type="checkbox" id="chbx" name="agree" value="Yes">
+           <label for="chbx">I agree</label>
+          </fieldset>
+      </form>
+      </div>
+
+
+      <!-- Submit button -->
+      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign in</button>
+
+      <!-- Register buttons -->
+      <div class="text-center">
+        <p>Not a member? <a href="#!">Register</a></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+      <footer class="footer" id="footer">
+        <div class="footer-wrap"> 
+          <div class="footer__addr">
+            <h1 class="footer__logo">Thank you for visiting SHOPPING WEBSITE! <hr> Emina Tahirović <hr> Introduction to Web Development <hr></h1> 
+                
+            <h2>Contact 033-122-122</h2>
+            
+            <address>
+              Vrbanja 1, Sarajevo 71000<br>
+                  
+              <a class="footer__btn" href="mailto:example@gmail.com" target="_blank">Email Us</a>
+            </address>
+          </div>
+      
+          <div class="video-commercial" width="420" height="315s">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fr9iyP3Dy5A?si=zNF3Svmh2clsjxAD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+  
+        <div class="footer-b">
+          <div class="legal">
+            <p>&copy; 2024 All rights reserved.</p>
+          </div>
+          <div class="professoremail">
+            <a class="emailbutton" href="mailto:amela.vatres@stu.ibu.edu.ba" target="_blank">Email prof. Amela Vatreš Mudželet</a>
+          </div>
+          </div>
+        </footer>
+
+
+
+
 </body>
 </html>

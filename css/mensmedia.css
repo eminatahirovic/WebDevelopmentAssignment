@@ -1,0 +1,10 @@
+@media screen and (max-width: 768px) {
+    .box1 nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images {
+        flex-direction:row;
+    }
+}
