@@ -17,6 +17,65 @@
     </head>
 <body>  
     
+<h1>ajax form submission test</h1>
+<p>please fill out form in order to sumbit it</p>
+
+
+<div id="formSubmissionDIV">
+  <div id="success-message" class="success-message">Form submitted successfully!</div>
+  <div id="error-message" class="error-message">There was an error submitting the form. Please try again.</div>
+
+
+<script>
+// this adds event listener for thje form submission
+
+document.getElementById('contact-form').addEventListener('submit', function(event)) {
+  event.preventDefault(); //prevents the form from being submitted in the usual way 
+
+  const formData = new FormData(this);  //this gets the data from the form 
+
+  const xhr = new XMLHttpRequest();   // creats a new XMLHttp Request object
+
+  xhr.open('POST', 'submit_form.php', true); //Opens a connection to the server (simulate sending data to a server-side script
+
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      document.getElementById('success-message').style.display = 'block';
+      document.getElementById('error-message').style.display = 'none';
+      document.getElementById('contact-form').reset(); //this resets the form 
+
+    } else {
+      //if an error appears the error message will be shown
+
+      document.getElementById('error-message').style.display = 'block';
+      document.getElementById('success-message').style.display = 'none';
+    }
+
+  }
+};
+
+//in case of error show this
+
+xhr.onerror = function() {
+  document.getElementById('error-message').style.display = 'block';
+  document.getElementById('success-message').style.display = 'none';
+};
+
+//send the form data in the form of a POST REQUEST 
+xhr.send(formData);
+
+</script>
+
+
+
+</div>
+
+
+
+
+
+
+
     <div class="upper-nav">
       <div class="box1">
         <nav>
