@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +10,17 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="../js/index.js">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       </head>
 
 
     <body>
-        
+
+      
+
       <div class="upper-nav">
         <div class="box1">
           <nav>
@@ -134,15 +138,90 @@
             </div>
             </div>
           </footer>
+
+
+
+<!-- READ MORE SECTION-->
+          <div id="ReadMoreSection">
+
+            <h3>Welcome to SHOPPING WEBSITE - Where Fashion Meets Convenience</h3>
+    
+            <p>
+              Founded in 2024, SHOPPING WEBSITE has been bringing stylish, affordable, and high-quality clothing to fashion lovers around the world.
+               We are proudly based in Sarajevo, and our online platform offers a seamless shopping experience for customers across the globe. 
+               Whether you're looking for the latest trends or timeless wardrobe staples, we strive to provide a diverse range of clothing options
+              that suit every style, personality, and occasion.
+              Our journey started with a simple goal: to create a shopping experience that combines ease, fashion-forward thinking, and customer satisfaction. 
+              Since then, we have grown from a small, passionate team to one of the go-to destinations for fashion enthusiasts everywhere. With thousands of 
+              satisfied customers, we continue to expand our collection, offering everything from casual wear to formal attire, ensuring there’s something for everyone.
+              
+              </p>
+    <div id="more" style="display:none;">
+        <p>Sed eleifend lectus id semper accumsan. Sed lobortis id ligula eget blandit. Integer interdum iaculis nunc, sed porttitor magna tincidunt in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lobortis accumsan tempor. Aliquam sollicitudin pulvinar est, quis convallis tellus.</p>
+        <img..../>
+    </div>
+    <a href="javascript:showMore()" id="link">Read More >></a>
+    
+    <script>
+    function showMore(){
+      //removes the link
+      document.getElementById('link').parentElement.removeChild('link');
+      //shows the #more
+      document.getElementById('more').style.display = "block";
+    }
+    </script>
+    
+        </div>
+
+<!-- END OF READ MORE SECTION -->
+
+
+
+
+
+
+
+
+
+ <!-- Toastr JS and jQuery -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+ <script>
+   //Toastr customizations 
+
+   toastr.options = {
+    "closebutton": true,
+    "debug": false,
+    "newestOnTop": true,
+    "progressBar":true,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": true,
+    "timeOut": "5000"
+   };
+
+//Success message appearance
+
+function showSuccessMessage(message) {
+  toastr.success(message);
+}
+
+//Error message appearance
+function showErrorMessage(message) {
+  toastr.error(message);
+}
+
+//Messages after the page has loaded
+
+$(document).ready (function () {
+  showSuccessMessage("Welcome to the website");
+  showErrorMessage("There was an error with the operation");
+})
+ </script>
+
+
+
     </body>
 </html>
-
-
-
-
-
-
-
-
 
 

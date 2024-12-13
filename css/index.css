@@ -1,3 +1,18 @@
+:root{
+  --first-color: white;
+  --second-color: black;
+}
+
+body{
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+.container{
+  padding: 40px;
+}
+
+
+
 button a {
   text-decoration: none;
 }
