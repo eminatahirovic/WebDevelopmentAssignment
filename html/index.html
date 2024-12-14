@@ -65,14 +65,7 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
     localStorage.setItem('theme', 'light')
   }
 });
-
-
-
 </script>
-
-
-
-
  </div>     
 
 
@@ -124,6 +117,44 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
               Register me!
             </button>
           </div>
+
+
+        <div id="contentToggleSection">
+          <h1>COntent toggle examples</h1>
+          <div class="toggle-section">
+            <button class="toggle-btn" onclick="toggleContent('content1')">Show Product Description</button>
+            <div class="content" id="content1">
+                <p>This is a detailed product description. You can add more details about the product here, such as its features, specifications, and other relevant information.</p>
+            </div>
+        </div>
+       
+        <div class="toggle-section">
+          <button class="toggle-btn" onclick="toggleContent('content2')">Show FAQ</button>
+          <div class="content" id="content2">
+              <p>This is a detailed product description. You can add more details about the product here, such as its features, specifications, and other relevant information.</p>
+          </div>
+      </div>
+
+      <div class="toggle-section">
+        <button class="toggle-btn" onclick="toggleContent('content3')">Show Product Description</button>
+        <div class="content" id="content3">
+            <p>This is a detailed product description. You can add more details about the product here, such as its features, specifications, and other relevant information.</p>
+        </div>
+    </div>
+
+    <script>
+      function toggleContent(contentId) {
+        var content = document.getElementById(contentId); // this is a function to check the toggle visibility of the content
+      
+        if (content.style.display === "block") {
+          content.style.display = "none"; // this function hides the content if it is already visible
+        } else {
+          content.style.display = "block"; // this function shows the content if it is hidden 
+        }
+      }
+    </script>
+
+        </div>
             
           <!-- part from bootstrap-->
           
@@ -159,6 +190,8 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
         </div>
 
         <div class="container-images">
+        
+
           <img src="https://static.sinsay.com/media/catalog/product/cache/1200/a4e40ebdc3e371adff845072e1c73f37/7/1/719BR-00X-001-1-890011.jpg" alt="mens1.jpg">
           <img src="https://static.sinsay.com/media/catalog/product/5/0/500EG-MLC-002-1-899713_4.jpg" alt="women's1.jpeg">
           <img src="https://static.sinsay.com/media/catalog/product/cache/1200/a4e40ebdc3e371adff845072e1c73f37/9/8/987BA-38X-001-1-876422.jpg" alt="girls.jpeg">
