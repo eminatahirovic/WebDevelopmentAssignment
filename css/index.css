@@ -81,7 +81,7 @@ ul li a{
 }
 .list {
     justify-items: center;
-    width: 70%;
+   
     padding-top: 15px;
 }
 
@@ -90,6 +90,7 @@ ul li a{
   align-items: center;
   justify-content: center;
   background-color: #007bff;
+  width: 50px;
 }
 
 .icons i {
@@ -287,8 +288,8 @@ ul {
     display: flex;
     flex-flow: row wrap;
     padding: 30px 30px 20px 30px;
-    color: #2f2f2f;
-    background-color: #fff;
+    
+    
     border-top: 1px solid #e5e5e5;
   }
   
@@ -399,7 +400,13 @@ ul {
 
 
 
-// light and dark mode testing// 
+/*light and dark mode testing*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
 body {
@@ -407,6 +414,7 @@ body {
   color: #000000;
   font-family: Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
+
 }
 
 /*Button Styles */
@@ -476,6 +484,8 @@ h1{
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  width:30%;
+
 }
 
 
