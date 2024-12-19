@@ -253,7 +253,7 @@ body {
   color: #444;
   cursor: pointer;
   padding: 18px;
-  width: 100%;
+  width: 50%;
   border: none;
   text-align: left;
   outline: none;
@@ -286,25 +286,23 @@ body {
 }
 
 /*FAQ*/
-
 .faqQuestion {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
   margin-bottom: 120px;
+  padding: 20px;
+  background-color:white;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px;
-  background-color: black;
-
 }
 
 .faqQuestion h2 {
   margin-bottom: 20px;
   text-align: center;
-  color: var(--secondary-color);
+  color: black;
 }
 
 .faqQuestion form {
@@ -316,7 +314,7 @@ body {
 .faqQuestion input[type="text"] {
   padding: 10px;
   font-size: 14px;
-  border: 2px solid var(--secondary-color);
+  border: 2px solid;
   border-radius: 8px;
 }
 
@@ -328,8 +326,8 @@ body {
 .faqQuestion button {
   padding: 10px;
   font-size: 14px;
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
+  color: white;
+  background-color: none
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -338,55 +336,4 @@ body {
 
 .faqQuestion button:hover {
   background-color: #d4af37;
-}
-/*.faqQuestion {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  margin-bottom: 120px;
-  padding: 60px;
-  background-color: black;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}*/
-
-.faqQuestion h2 {
-  margin-bottom: 20px;
-  text-align: center;
-  color: white;
-}
-
-.faqQuestion form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.faqQuestion input[type="text"] {
-  padding: 10px;
-  font-size: 14px;
-  border: 2px solid black;
-  border-radius: 8px;
-}
-
-.faqQuestion input[type="text"]:focus {
-  outline: none;
-  border-color: red;
-}
-
-.faqQuestion button {
-  padding: 10px;
-  font-size: 14px;
-  color: black;
-  background-color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.faqQuestion button:hover {
-  background-color: red;
 }

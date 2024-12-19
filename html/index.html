@@ -121,42 +121,7 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
           </div>
 
 
-        <div id="contentToggleSection">
-          <h1>COntent toggle examples</h1>
-          <div class="toggle-section">
-            <button class="toggle-btn" onclick="toggleContent('content1')">Show Product Description</button>
-            <div class="content" id="content1">
-                <p>This is a detailed product description. You can add more details about the product here, such as its features, specifications, and other relevant information.</p>
-            </div>
-        </div>
-       
-        <div class="toggle-section">
-          <button class="toggle-btn" onclick="toggleContent('content2')">Show FAQ</button>
-          <div class="content" id="content2">
-              <p>This is a detailed product description. You can add more details about the product here, such as its features, specifications, and other relevant information.</p>
-          </div>
-      </div>
-
-      <div class="toggle-section">
-        <button class="toggle-btn" onclick="toggleContent('content3')">Show Product Description</button>
-        <div class="content" id="content3">
-            <p>This is a detailed product description. You can add more details about the product here, such as its features, specifications, and other relevant information.</p>
-        </div>
-    </div>
-
-    <script>
-      function toggleContent(contentId) {
-        var content = document.getElementById(contentId); // this is a function to check the toggle visibility of the content
-      
-        if (content.style.display === "block") {
-          content.style.display = "none"; // this function hides the content if it is already visible
-        } else {
-          content.style.display = "block"; // this function shows the content if it is hidden 
-        }
-      }
-    </script>
-
-        </div>
+        
             
           <!-- part from bootstrap-->
           
@@ -199,10 +164,42 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
           <img src="https://static.sinsay.com/media/catalog/product/cache/1200/a4e40ebdc3e371adff845072e1c73f37/9/8/987BA-38X-001-1-876422.jpg" alt="girls.jpeg">
         </div>
 
+<!-- READ MORE SECTION-->
+<div id="ReadMoreSection">
 
-        <div class="video-commercial" width="420" height="315s">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/fr9iyP3Dy5A?si=zNF3Svmh2clsjxAD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+  <h3>Welcome to SHOPPING WEBSITE - Where Fashion Meets Convenience</h3>
+
+  <p>
+    Founded in 2024, SHOPPING WEBSITE has been offering stylish, 
+    affordable, and high-quality clothing worldwide. Based in Sarajevo,
+     we provide a seamless online shopping experience with a diverse 
+     range of clothing to suit every style and occasion. Starting as a 
+     small team, we've grown into a trusted destination for fashion 
+     enthusiasts, delivering everything from casual wear to formal
+      attire to meet every need.
+  </p> 
+    
+<div id="more" style="display:none;">
+<p>Sed eleifend lectus id semper accumsan. Sed lobortis id ligula eget blandit. Integer interdum iaculis nunc, sed porttitor magna tincidunt in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lobortis accumsan tempor. Aliquam sollicitudin pulvinar est, quis convallis tellus.</p>
+<img..../>
+</div>
+
+<a href="../html/aboutus.html" id="link">Read More >></a>
+
+<script>
+function showMore(){
+//removes the link
+document.getElementById('link').parentElement.removeChild('link');
+//shows the #more
+document.getElementById('more').style.display = "block";
+}
+</script>
+
+</div>
+
+<!-- END OF READ MORE SECTION -->
+       
+     
 
 
         <footer class="footer" id="footer">
@@ -219,6 +216,9 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
               </address>
             </div>
         
+            <div class="video-commercial" width="420" height="315s">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/fr9iyP3Dy5A?si=zNF3Svmh2clsjxAD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
            
           </div>
     
@@ -234,40 +234,43 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
 
 
 
-<!-- READ MORE SECTION-->
-          <div id="ReadMoreSection">
 
-            <h3>Welcome to SHOPPING WEBSITE - Where Fashion Meets Convenience</h3>
-    
-            <p>
-              Founded in 2024, SHOPPING WEBSITE has been bringing stylish, affordable, and high-quality clothing to fashion lovers around the world.
-               We are proudly based in Sarajevo, and our online platform offers a seamless shopping experience for customers across the globe. 
-               Whether you're looking for the latest trends or timeless wardrobe staples, we strive to provide a diverse range of clothing options
-              that suit every style, personality, and occasion.
-              Our journey started with a simple goal: to create a shopping experience that combines ease, fashion-forward thinking, and customer satisfaction. 
-              Since then, we have grown from a small, passionate team to one of the go-to destinations for fashion enthusiasts everywhere. With thousands of 
-              satisfied customers, we continue to expand our collection, offering everything from casual wear to formal attire, ensuring there’s something for everyone.
-              
-              </p>
-    <div id="more" style="display:none;">
-        <p>Sed eleifend lectus id semper accumsan. Sed lobortis id ligula eget blandit. Integer interdum iaculis nunc, sed porttitor magna tincidunt in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lobortis accumsan tempor. Aliquam sollicitudin pulvinar est, quis convallis tellus.</p>
-        <img..../>
-    </div>
-    <a href="javascript:showMore()" id="link">Read More >></a>
-    
-    <script>
-    function showMore(){
-      //removes the link
-      document.getElementById('link').parentElement.removeChild('link');
-      //shows the #more
-      document.getElementById('more').style.display = "block";
-    }
-    </script>
-    
+          <div id="contentToggleSection">
+            <h3>Frequently Asked Questions: </h3>
+            <div class="toggle-section">
+              <button class="toggle-btn" onclick="toggleContent('content1')">What are your shipping options?</button>
+              <div class="content" id="content1">
+                  <p>We offer standard, expedited, and same-day delivery options. Shipping times vary based on your location.</p>
+              </div>
+          </div>
+         
+          <div class="toggle-section">
+            <button class="toggle-btn" onclick="toggleContent('content2')">How much does shipping cost?</button>
+            <div class="content" id="content2">
+                <p>Shipping costs depend on the selected method and your location. Free shipping is available for orders over $100.</p>
+            </div>
         </div>
-
-<!-- END OF READ MORE SECTION -->
-
+  
+        <div class="toggle-section">
+          <button class="toggle-btn" onclick="toggleContent('content3')">Can I track my order?</button>
+          <div class="content" id="content3">
+              <p>Yes, once your order is shipped, you will receive a tracking number via email.</p>
+          </div>
+      </div>
+  
+      <script>
+        function toggleContent(contentId) {
+          var content = document.getElementById(contentId); // this is a function to check the toggle visibility of the content
+        
+          if (content.style.display === "block") {
+            content.style.display = "none"; // this function hides the content if it is already visible
+          } else {
+            content.style.display = "block"; // this function shows the content if it is hidden 
+          }
+        }
+      </script>
+  
+          </div>
 
 
 

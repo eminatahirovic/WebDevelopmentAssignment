@@ -81,6 +81,41 @@
     </div>
   </section>
 
+
+  /*#js code for interactive gallery 
+ 
+<script>
+
+// Add this JavaScript to handle the image enlargement and back to normal behavior
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.images img');
+    const enlargedImageContainer = document.createElement('div');
+    enlargedImageContainer.classList.add('enlarged-image');
+    document.body.appendChild(enlargedImageContainer);
+
+    const enlargedImage = document.createElement('img');
+    enlargedImageContainer.appendChild(enlargedImage);
+
+    // Click event to enlarge the image
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            enlargedImage.src = image.src; // Set the source of the enlarged image
+            enlargedImageContainer.classList.add('active'); // Show the enlarged image container
+        });
+    });
+
+    // Click anywhere outside the enlarged image to return to normal view
+    enlargedImageContainer.addEventListener('click', function(event) {
+        if (event.target === enlargedImageContainer) {
+            enlargedImageContainer.classList.remove('active'); // Hide the enlarged image
+        }
+    });
+});
+
+
+
+</script>
+
   <footer class="footer" id="footer">
     <div class="footer-wrap"> 
       <div class="footer__addr">

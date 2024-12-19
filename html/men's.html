@@ -12,6 +12,60 @@
 </head>
 <body>
     
+  <div>
+    <button id="theme-toggle" onclick="toggleTheme()">SWITCH TO DARK MODE</button>
+  
+  
+  <script>
+  
+  // Function that switches from light and dark themes 
+  
+  function toggleTheme() {
+    const body = document.body;
+    const button = document.getElementById('theme-toggle');
+  
+    // toggle for dark theme class within the body
+  
+    body.classList.toggle('dark-theme');
+  
+    //buttin that changes text based on the current state
+  
+    if (body.classList.contains('dark-theme')) {
+      button.textContent = 'Switch to Light Mode';
+    } else {
+      button.textContent = 'Switch to Dark mode';
+    }
+  }
+  
+  // code used to save the users preference theme
+  
+  document.addEventListener('DOMContentLoaded'), () => {
+      const savedTheme = localStorage.getItem('theme');
+  }
+  
+  if (savedTheme=== 'dark') {
+    document.body.classList.add('dark-theme');
+    document.getElementById('theme-toggle').textContent = 'Switch to Light Mode';
+  }
+  
+  //Event listener for changes within the theme toggle button
+  
+  document.getElementById('theme-toggle').addEventListener('click', () => {
+    if (document.body.classList.contains('dark-theme')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light')
+    }
+  });
+  </script>
+   </div>     
+  
+
+
+
+
+
+
   <div class="upper-nav">
   <div class="box1">
     <nav>
@@ -26,34 +80,36 @@
   </div>
 
   <div class="subbox">
-      <div class="background">
-          <h2 class="shopping-web">Shopping Website</h2>
-      </div>
-  
-      <div class="list">
-      <ol>
-        <li><a href="/html/index.html" target="_blank">Home</a></li>
-        <li><a href="/html/men's.html" target="_blank">Men's</a></li>
-        <li><a href="/html/women's.html" target="_blank">Women's</a></li>
-        <li><a href="/html/teens.html" target="_blank">Teens</a></li>
-        <li><a href="/html/aboutus.html" target="_blank">About us</a></li>
-      </ol>
-  
-      <div class="icon">
-      <i class="fa fa-search" aria-hidden="true"></i>
-      <i class="fa fa-user" aria-hidden="true"></i>
-  
-          <div class="icon">
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </div>
-  
-          <div class="cover">
-              <img src="" alt="">
-  
-          </div>
+    <div class="background">
+        <h2 class="shopping-web">Shopping Website</h2>
+    </div>
+
+    <div class="list">
+    <ol>
+      <li><a href="/html/index.html" target="_blank">Home</a></li>
+      <li><a href="/html/men's.html" target="_blank">Men's</a></li>
+      <li><a href="/html/women's.html" target="_blank">Women's</a></li>
+      <li><a href="/html/teens.html" target="_blank">Teens</a></li>
+      <li><a href="/html/aboutus.html" target="_blank">About us</a></li>
+    </ol>
+
+    <div class="icon">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <i class="fa fa-user" aria-hidden="true"></i>
+
+        <div class="icon">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </div>
+
+        <div class="cover">
+            <img src="" alt="">
+
         </div>
       </div>
     </div>
+  </div>
+
+</div>
 
 </div>
 
@@ -81,6 +137,42 @@
     </div>
   </div>
 </section>
+
+
+/*#js code for interactive gallery 
+ 
+<script>
+
+// Add this JavaScript to handle the image enlargement and back to normal behavior
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.images img');
+    const enlargedImageContainer = document.createElement('div');
+    enlargedImageContainer.classList.add('enlarged-image');
+    document.body.appendChild(enlargedImageContainer);
+
+    const enlargedImage = document.createElement('img');
+    enlargedImageContainer.appendChild(enlargedImage);
+
+    // Click event to enlarge the image
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            enlargedImage.src = image.src; // Set the source of the enlarged image
+            enlargedImageContainer.classList.add('active'); // Show the enlarged image container
+        });
+    });
+
+    // Click anywhere outside the enlarged image to return to normal view
+    enlargedImageContainer.addEventListener('click', function(event) {
+        if (event.target === enlargedImageContainer) {
+            enlargedImageContainer.classList.remove('active'); // Hide the enlarged image
+        }
+    });
+});
+
+
+
+</script>
+
 
 
 <footer class="footer" id="footer">
