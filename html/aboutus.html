@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/men's.css">
     <link rel="stylesheet" href="../css/mensmedia.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='../css/aboutus.css'>
-</head>
+  </head>
 
 <body>
 
@@ -117,6 +117,21 @@
       </table>
 
 
+
+      <div class="faqQuestion">
+        <h2>Ask a Question</h2>
+        <form id="questionForm" autocomplete="off">
+          <input
+            type="text"
+            id="userQuestion"
+            name="userQuestion"
+            placeholder="Type your question here..."
+            required
+          />
+          <button type="button" id="success">Ask</button>
+        </form>
+        <div id="questionsContainer"></div>
+      </div>
       <div class="map">
         <h3>Find us here!</h3>
         <iframe 
@@ -161,6 +176,6 @@
     </div>
     </div>
   </footer>
-
+  <script src="../js/index.js"></script>
 </body>
 </html>
