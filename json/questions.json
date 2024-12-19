@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "question":"Earliest package arrival?"
+    },
+    {
+        "id":2,
+        "question":"Possible discounts?"
+    },
+    {
+        "id":3,
+        "question":"New fashion trends?"
+    }
+]

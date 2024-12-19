@@ -223,7 +223,46 @@ a:hover {
 }
 
 
- 
+ // this is for AJAX form submission
+
+ body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input,button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.success-message  {
+  padding: 15px;
+  background-color: #0056b3;
+  color: whitesmoke;
+  text-align: center;
+  display: none;
+  margin-top: 20px;
+}
+
+.error-message {
+
+  padding: 15px;
+  background-color: #c23321;
+  color: white;
+  text-align: center;
+  display: none;
+  margin-top: 20px;
+}
+
+
 
 
 
