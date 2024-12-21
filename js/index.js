@@ -21,7 +21,7 @@ fetch('../html/questions.json')
     userQuestion.value = '';
   }
 }); */
-
+/*
 document.addEventListener('DOMContentLoaded', () => {
     const successButton = document.getElementById('success');
     successButton.addEventListener('click', function () {
@@ -33,7 +33,27 @@ document.addEventListener('DOMContentLoaded', () => {
         userQuestion.value = '';
       }
     });
-  });
+  }); */
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const successButton = document.getElementById('success');
+    const userQuestion = document.getElementById('userQuestion'); // Ensure this is the correct ID
+
+    if (successButton && userQuestion) {
+        successButton.addEventListener('click', function () {
+            const questionText = userQuestion.value.trim();
+
+            if (questionText !== '') {
+                const newQuestion = { id: Date.now(), text: questionText };
+                showQuestion(newQuestion);
+                userQuestion.value = '';
+            }
+        });
+    } else {
+        console.error('Either successButton or userQuestion is missing in the DOM.');
+    }
+});
+
 
 function showQuestion(question) {
   const questionContainer = document.createElement('div');
@@ -79,4 +99,4 @@ function displaySuccessMessage(message) {
   setTimeout(() => {
     questionForm.removeChild(successMessage);
   }, 2000);
-}
+} 

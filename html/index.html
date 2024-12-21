@@ -19,72 +19,27 @@
 
     <body>
 
-    <!-- GEOLOCATION API-->
 
-    <script>
-      const successCallback = (position) => {
-  console.log(position);
+ <!-- GEOLOCATION API-->
+
+ <script>
+  const successCallback = (position) => {
+console.log(position);
 };
 
 const errorCallback = (error) => {
-  console.log(error);
+console.log(error);
 };
 
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
-    </script>
+</script>
 
-
- 
 
 
  <div>
   <button id="theme-toggle" onclick="toggleTheme()">SWITCH TO DARK MODE</button>
-
-
-<script>
-
-// Function that switches from light and dark themes 
-
-function toggleTheme() {
-  const body = document.body;
-  const button = document.getElementById('theme-toggle');
-
-  // toggle for dark theme class within the body
-
-  body.classList.toggle('dark-theme');
-
-  //buttin that changes text based on the current state
-
-  if (body.classList.contains('dark-theme')) {
-    button.textContent = 'Switch to Light Mode';
-  } else {
-    button.textContent = 'Switch to Dark mode';
-  }
-}
-
-// code used to save the users preference theme
-
-document.addEventListener('DOMContentLoaded'), () => {
-    const savedTheme = localStorage.getItem('theme');
-}
-
-if (savedTheme=== 'dark') {
-  document.body.classList.add('dark-theme');
-  document.getElementById('theme-toggle').textContent = 'Switch to Light Mode';
-}
-
-//Event listener for changes within the theme toggle button
-
-document.getElementById('theme-toggle').addEventListener('click', () => {
-  if (document.body.classList.contains('dark-theme')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
-    localStorage.setItem('theme', 'light')
-  }
-});
-</script>
- </div>     
+</div>
 
 
 
@@ -197,10 +152,7 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
       attire to meet every need.
   </p> 
     
-<div id="more" style="display:none;">
-<p>Sed eleifend lectus id semper accumsan. Sed lobortis id ligula eget blandit. Integer interdum iaculis nunc, sed porttitor magna tincidunt in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lobortis accumsan tempor. Aliquam sollicitudin pulvinar est, quis convallis tellus.</p>
-<img..../>
-</div>
+
 
 <a href="../html/aboutus.html" id="link">Read More >></a>
 
@@ -218,6 +170,8 @@ document.getElementById('more').style.display = "block";
 <!-- END OF READ MORE SECTION -->
        
      
+
+
 
 
         <footer class="footer" id="footer">
@@ -251,6 +205,8 @@ document.getElementById('more').style.display = "block";
           </footer>
 
 
+
+    
 
 
           <div id="contentToggleSection">
@@ -296,46 +252,7 @@ document.getElementById('more').style.display = "block";
 
 
 
-
- <!-- Toastr JS and jQuery  BEGINNING-->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
- <script>
-   //Toastr customizations 
-
-   toastr.options = {
-    "closebutton": true,
-    "debug": false,
-    "newestOnTop": true,
-    "progressBar":true,
-    "positionClass": "toast-top-right",
-    "preventDuplicates": true,
-    "timeOut": "5000"
-   };
-
-//Success message appearance
-
-function showSuccessMessage(message) {
-  toastr.success(message);
-}
-
-//Error message appearance
-function showErrorMessage(message) {
-  toastr.error(message);
-}
-
-//Messages after the page has loaded
-
-$(document).ready (function () {
-  showSuccessMessage("Welcome to the website");
-  showErrorMessage("There was an error with the operation");
-})
- </script>
-
- <!-- Toastr JS and jQuery  END-->
-
-
+<script src="../js/theme.js"></script>
     </body>
 </html>
 

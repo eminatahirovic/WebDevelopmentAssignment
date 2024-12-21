@@ -17,65 +17,6 @@
     </head>
 <body>  
     
-<h1>ajax form submission test</h1>
-<p>please fill out form in order to sumbit it</p>
-
-
-<div id="formSubmissionDIV">
-  <div id="success-message" class="success-message">Form submitted successfully!</div>
-  <div id="error-message" class="error-message">There was an error submitting the form. Please try again.</div>
-
-
-<script>
-// this adds event listener for thje form submission
-
-document.getElementById('contact-form').addEventListener('submit', function(event)) {
-  event.preventDefault(); //prevents the form from being submitted in the usual way 
-
-  const formData = new FormData(this);  //this gets the data from the form 
-
-  const xhr = new XMLHttpRequest();   // creats a new XMLHttp Request object
-
-  xhr.open('POST', 'submit_form.php', true); //Opens a connection to the server (simulate sending data to a server-side script
-
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-      document.getElementById('success-message').style.display = 'block';
-      document.getElementById('error-message').style.display = 'none';
-      document.getElementById('contact-form').reset(); //this resets the form 
-
-    } else {
-      //if an error appears the error message will be shown
-
-      document.getElementById('error-message').style.display = 'block';
-      document.getElementById('success-message').style.display = 'none';
-    }
-
-  }
-};
-
-//in case of error show this
-
-xhr.onerror = function() {
-  document.getElementById('error-message').style.display = 'block';
-  document.getElementById('success-message').style.display = 'none';
-};
-
-//send the form data in the form of a POST REQUEST 
-xhr.send(formData);
-
-</script>
-
-
-
-</div>
-
-
-
-
-
-
-
     <div class="upper-nav">
       <div class="box1">
         <nav>
@@ -118,73 +59,93 @@ xhr.send(formData);
 
     <section>
     <div>
-
-
-<!--  content -->
-<div class="tab-content">
-  <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-    <form>
-      <div class="text-center mb-3">
-        <p>Sign in with:</p>
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-facebook-f"></i>
-        </button>
-
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-google"></i>
-        </button>
-
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-twitter"></i>
-        </button>
-
-        <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-          <i class="fab fa-github"></i>
-        </button>
-      </div>
-
-      <p class="text-center">or:</p>
-
-      <!-- Email input -->
-      <div data-mdb-input-init class="form-outline mb-4">
-        <input type="email" id="loginName" class="form-control"  required/>
-        <label class="form-label" for="loginName">Email or username</label>
-      </div>
-
-      <!-- Password input -->
-      <div data-mdb-input-init class="form-outline mb-4">
-        <input type="password" id="loginPassword" class="form-control" minlength="8" maxlength="15" />
-        <label class="form-label" for="loginPassword" aria-required="true">Password</label>
-      </div>
-
-      <!-- 2 column grid layout -->
-      <div class="row mb-4">
-        <div class="col-md-6 d-flex justify-content-center">
-          <!-- Checkbox -->
-          <div class="form-check mb-3 mb-md-0">
-            <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
-            <label class="form-check-label" for="loginCheck"> Remember me </label>
+      <section>
+        <div>
+    
+    
+    <!--  content -->
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+        <form>
+          <div class="text-center mb-3">
+            <p>Sign in with:</p>
+            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+    
+            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-google"></i>
+            </button>
+    
+            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-twitter"></i>
+            </button>
+    
+            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+              <i class="fab fa-github"></i>
+            </button>
           </div>
-        </div>
-
-        <div class="col-md-6 d-flex justify-content-center">
-          <!-- Simple link -->
-          <a href="#!">Forgot password?</a>
-        </div>
-      </div>
-
-       <!-- do you allow us to send you weekly updates -->
-      <div class="weekly-emails-message">
-        <form action="">
-          <fieldset>
-            <legend> <p> Sign up to recieve weekly email with exclusive content and offers.</p> <hr>
-              <b>Do you agree to recieve these emails?</b>
-            </legend>
-           <input type="checkbox" id="chbx" name="agree" value="Yes">
-           <label for="chbx">I agree</label>
-          </fieldset>
-      </form>
-      </div>
+    
+          <p class="text-center">or:</p>
+    
+          <!-- Email input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="email" id="loginName" class="form-control" />
+            <label class="form-label" for="loginName">Email or username</label>
+          </div>
+          
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="date" id="dob" class="form-control"  />
+            <label class="form-label" for="dob">Date of Birth</label>
+          </div>
+    
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="tel" id="phoneNumber" class="form-control" pattern="[0-9]{10}" />
+            <label class="form-label" for="phoneNumber">Phone Number</label>
+            <small class="form-text text-muted">Enter a 10-digit phone number.</small>
+          </div>
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="text" id="address" class="form-control"  />
+            <label class="form-label" for="address">Address</label>
+          </div>
+               
+    
+          <!-- Password input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="password" id="loginPassword" class="form-control" minlength="8" maxlength="15" />
+            <label class="form-label" for="loginPassword" aria-required="true">Password</label>
+          </div>
+    
+          <!-- 2 column grid layout -->
+          <div class="row mb-4">
+            <div class="col-md-6 d-flex justify-content-center">
+              <!-- Checkbox -->
+              <div class="form-check mb-3 mb-md-0">
+                <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+                <label class="form-check-label" for="loginCheck"> Remember me </label>
+              </div>
+            </div>
+    
+            <div class="col-md-6 d-flex justify-content-center">
+              <!-- Simple link -->
+              <a href="#!">Forgot password?</a>
+            </div>
+          </div>
+    
+           <!-- do you allow us to send you weekly updates -->
+          <div class="weekly-emails-message">
+            <form action="">
+              <fieldset>
+                <legend> <p> Sign up to recieve weekly email with exclusive content and offers.</p> <hr>
+                  <b>Do you agree to recieve these emails?</b>
+                </legend>
+               <input type="checkbox" id="chbx" name="agree" value="Yes">
+               <label for="chbx">I agree</label>
+              </fieldset>
+          </form>
+          </div>
+    
+    
 
 
       <!-- Submit button -->
@@ -197,6 +158,8 @@ xhr.send(formData);
     </form>
   </div>
 </section>
+
+
 
 
       <footer class="footer" id="footer">
@@ -228,6 +191,56 @@ xhr.send(formData);
           </div>
         </footer>
 
+
+<script>const notifications = document.querySelector(".notifications"),
+  buttons = document.querySelectorAll(".buttons .btn")
+
+const toastDetails = {
+  timer: 5000,
+  success: {
+    icon: "fa-circle-check",
+    text: "Hello World: This is a success toast.",
+  },
+  error: {
+    icon: "fa-circle-xmark",
+    text: "Hello World: This is an error toast.",
+  },
+  warning: {
+    icon: "fa-triangle-exclamation",
+    text: "Hello World: This is a warning toast.",
+  },
+  info: {
+    icon: "fa-circle-info",
+    text: "Hello World: This is an information toast.",
+  },
+  random: {
+    icon: "fa-solid fa-star",
+    text: "Hello World: This is a random toast.",
+  },
+}
+
+const removeToast = (toast) => {
+  toast.classList.add("hide")
+  if (toast.timeoutId) clearTimeout(toast.timeoutId)
+  setTimeout(() => toast.remove(), 500)
+}
+
+const createToast = (id) => {
+  const { icon, text } = toastDetails[id]
+  const toast = document.createElement("li")
+  toast.className = `toast ${id}`
+  toast.innerHTML = `<div class="column">
+                         <i class="fa-solid ${icon}"></i>
+                         <span>${text}</span>
+                      </div>
+                      <i class="fa-solid fa-xmark" onclick="removeToast(this.parentElement)"></i>`
+  notifications.appendChild(toast) 
+  toast.timeoutId = setTimeout(() => removeToast(toast), toastDetails.timer)
+}
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => createToast(btn.id))
+})</script>
 
 
 

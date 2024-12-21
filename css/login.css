@@ -223,47 +223,21 @@ a:hover {
 }
 
 
- // this is for AJAX form submission
+ 
 
- body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  padding: 20px;
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
-
-form {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-input,button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+#successMessage {
   font-size: 16px;
-}
-
-.success-message  {
-  padding: 15px;
-  background-color: #0056b3;
-  color: whitesmoke;
-  text-align: center;
+  padding: 10px;
+  background-color: #e9ffe9;
+  border: 1px solid #6c6;
+  border-radius: 5px;
   display: none;
-  margin-top: 20px;
-}
-
-.error-message {
-
-  padding: 15px;
-  background-color: #c23321;
-  color: white;
   text-align: center;
-  display: none;
-  margin-top: 20px;
+  margin-top: 10px;
 }
-
-
-
-
-
-
