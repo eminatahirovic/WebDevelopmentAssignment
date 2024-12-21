@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non-Working Days</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px auto;
+    }
+
+    .table th,
+    .table td {
+      border: 1px solid black; /* Apply border only to table cells */
+      padding: 8px;
+      text-align: left;
+    }
+
+    .table-hover tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .schedule-text {
+      padding: 20px;
+      text-align: center;
+      max-width: 80%;
+      margin: 20px auto;
+    }
+
+    .schedule-text h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="schedule-text">
+    <h2>Non-Working Days</h2>
+    <table id="nonWorkingDaysTable" class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Occasion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table rows will be inserted dynamically here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      // Example JSON data
+      const jsonData = [
+        {
+          "title": "New Year's Eve",
+          "description": "31.12."
+        },
+        {
+          "title": "New Year's Day",
+          "description": "01.01."
+        },
+        {
+          "title": "Valentine's Day",
+          "description": "14.02."
+        },
+        {
+          "title": "International Women's Day",
+          "description": "08.03."
+        },
+        {
+          "title": "Labor Day",
+          "description": "01.05."
+        }
+      ];
+
+      // Dynamically populate the table with JSON data
+      let tableBody = $('#nonWorkingDaysTable tbody');
+      jsonData.forEach(function (day) {
+        let row = `
+          <tr>
+            <td>${day.description}</td>
+            <td>${day.title}</td>
+          </tr>
+        `;
+        tableBody.append(row);
+      });
+    });
+  </script>
+</body>
+</html>
