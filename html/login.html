@@ -88,34 +88,53 @@
     
           <p class="text-center">or:</p>
     
-          <!-- Email input -->
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="email" id="loginName" class="form-control" />
-            <label class="form-label" for="loginName">Email or username</label>
-          </div>
+         <!-- Email input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="email" id="loginName" class="form-control"  required/>
+          <label class="form-label" for="loginName">Email or username</label>
+          <div id="emailError" class="error"></div>
+        </div>
+  
+        <div class="form-outline mb-4">
+          <input type="date" id="dob" name="dob" class="form-control" />
+          <label class="form-label" for="dob">Date of Birth</label>
+          <div id="dobError" class="error"></div>
+        </div>
+  
+                <!-- Phone Number -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="phoneNumber" name="phone" class="form-control" />
+                  <label class="form-label" for="phoneNumber">Phone Number</label>
+                  <small class="form-text text-muted">Enter a 10-digit phone number.</small>
+                  <div id="phoneError" class="error"></div>
+                </div>
           
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="date" id="dob" class="form-control"  />
-            <label class="form-label" for="dob">Date of Birth</label>
-          </div>
-    
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="tel" id="phoneNumber" class="form-control" pattern="[0-9]{10}" />
-            <label class="form-label" for="phoneNumber">Phone Number</label>
-            <small class="form-text text-muted">Enter a 10-digit phone number.</small>
-          </div>
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="text" id="address" class="form-control"  />
-            <label class="form-label" for="address">Address</label>
-          </div>
-               
-    
-          <!-- Password input -->
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="password" id="loginPassword" class="form-control" minlength="8" maxlength="15" />
-            <label class="form-label" for="loginPassword" aria-required="true">Password</label>
-          </div>
-    
+                <!-- Address -->
+         <div class="form-outline mb-4">
+          <input type="text" id="address" name="address" class="form-control" />
+          <label class="form-label" for="address">Address</label>
+          <div id="addressError" class="error"></div>
+        </div>
+  
+  
+        <!-- Password input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input type="password" id="loginPassword" class="form-control" minlength="8" maxlength="15" />
+          <label class="form-label" for="loginPassword" aria-required="true">Password</label>
+        </div>
+  
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+  
+  
+  
+  
+      <!-- Success Message -->
+      <div id="successMessage">Data saved successfully!</div>
+    </form>
+  </div>
+</section>
+        
           <!-- 2 column grid layout -->
           <div class="row mb-4">
             <div class="col-md-6 d-flex justify-content-center">
@@ -147,10 +166,6 @@
     
     
 
-
-      <!-- Submit button -->
-      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign in</button>
-
       <!-- Register buttons -->
       <div class="text-center">
         <p>Not a member? <a href="#!">Register</a></p>
@@ -160,6 +175,66 @@
 </section>
 
 
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Clear previous error messages
+    const errorMessages = document.querySelectorAll(".error");
+    errorMessages.forEach((error) => (error.textContent = ""));
+
+    let isValid = true;
+
+    // Validate email
+    const email = document.getElementById("loginName").value.trim();
+    if (!email) {
+      document.getElementById("emailError").textContent = "Email is required.";
+      isValid = false;
+    }
+
+    // Validate date of birth
+    const dob = document.getElementById("dob").value.trim();
+    if (!dob) {
+      document.getElementById("dobError").textContent = "Date of birth is required.";
+      isValid = false;
+    }
+
+    // Validate phone number
+    const phone = document.getElementById("phoneNumber").value.trim();
+    if (!/^\d{10}$/.test(phone)) {
+      document.getElementById("phoneError").textContent = "Phone number must be 10 digits.";
+      isValid = false;
+    }
+
+    // Validate address
+    const address = document.getElementById("address").value.trim();
+    if (address.length < 10) {
+      document.getElementById("addressError").textContent = "Address must be at least 10 characters.";
+      isValid = false;
+    }
+
+    // Validate password
+    const password = document.getElementById("loginPassword").value.trim();
+    if (password.length < 10 || password.length > 15) {
+      document.getElementById("passwordError").textContent = "Password must be between 10 and 15 characters.";
+      isValid = false;
+    }
+
+    // If valid, show success message
+    if (isValid) {
+      const successMessage = document.getElementById("successMessage");
+      successMessage.style.display = "block";
+      successMessage.innerText = "Data saved successfully!";
+      
+      // Clear the form
+      event.target.reset();
+    }
+  });
+</script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"
+></script>
 
 
       <footer class="footer" id="footer">
@@ -190,57 +265,6 @@
           </div>
           </div>
         </footer>
-
-
-<script>const notifications = document.querySelector(".notifications"),
-  buttons = document.querySelectorAll(".buttons .btn")
-
-const toastDetails = {
-  timer: 5000,
-  success: {
-    icon: "fa-circle-check",
-    text: "Hello World: This is a success toast.",
-  },
-  error: {
-    icon: "fa-circle-xmark",
-    text: "Hello World: This is an error toast.",
-  },
-  warning: {
-    icon: "fa-triangle-exclamation",
-    text: "Hello World: This is a warning toast.",
-  },
-  info: {
-    icon: "fa-circle-info",
-    text: "Hello World: This is an information toast.",
-  },
-  random: {
-    icon: "fa-solid fa-star",
-    text: "Hello World: This is a random toast.",
-  },
-}
-
-const removeToast = (toast) => {
-  toast.classList.add("hide")
-  if (toast.timeoutId) clearTimeout(toast.timeoutId)
-  setTimeout(() => toast.remove(), 500)
-}
-
-const createToast = (id) => {
-  const { icon, text } = toastDetails[id]
-  const toast = document.createElement("li")
-  toast.className = `toast ${id}`
-  toast.innerHTML = `<div class="column">
-                         <i class="fa-solid ${icon}"></i>
-                         <span>${text}</span>
-                      </div>
-                      <i class="fa-solid fa-xmark" onclick="removeToast(this.parentElement)"></i>`
-  notifications.appendChild(toast) 
-  toast.timeoutId = setTimeout(() => removeToast(toast), toastDetails.timer)
-}
-
-buttons.forEach((btn) => {
-  btn.addEventListener("click", () => createToast(btn.id))
-})</script>
 
 
 
