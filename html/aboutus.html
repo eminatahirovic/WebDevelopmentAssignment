@@ -199,26 +199,6 @@
 
 
 
-
-<script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-  
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      } 
-    });
-  }
-  </script>
-  
-
-
 <footer class="footer" id="footer">
   <div class="footer-wrap"> 
     <div class="footer__addr">
@@ -249,10 +229,7 @@
   </footer>
   <script src="../js/index.js"></script>
 <script src="../js/theme.js"></script>
+<script src="../js/all.js"></script>
 
-
-
-
-</script>
 </body>
 </html>

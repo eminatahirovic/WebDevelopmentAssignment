@@ -12,7 +12,6 @@ body{
 }
 
 
-
 button a {
   text-decoration: none;
 }
@@ -545,8 +544,6 @@ h1{
 }
 
 
-
-
 /* read more */
 #ReadMoreSection{
   /*border: 1px solid #000000;
@@ -559,10 +556,7 @@ h1{
 }
 
 
-
 /* this is for toastr */
-
-
 /*toastr*/
 #toast-container .toast-success {
   background-color: #28a745;
@@ -579,11 +573,9 @@ h1{
 }
 
 
-
 #contentToggleSection {
   font-family: 'Courier New', Courier, monospace;
 }
-
 
 .giveaway{ 
   max-width: 45%;

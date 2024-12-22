@@ -16,63 +16,8 @@
   
   <div>
     <button id="theme-toggle" onclick="toggleTheme()">SWITCH TO DARK MODE</button>
-  
-  
-  <script>
-  
-  // Function that switches from light and dark themes 
-  
-  function toggleTheme() {
-    const body = document.body;
-    const button = document.getElementById('theme-toggle');
-  
-    // toggle for dark theme class within the body
-  
-    body.classList.toggle('dark-theme');
-  
-    //buttin that changes text based on the current state
-  
-    if (body.classList.contains('dark-theme')) {
-      button.textContent = 'Switch to Light Mode';
-      localStorage.setItem('theme', 'dark');
-    } else {
-      button.textContent = 'Switch to Dark mode';
-      localStorage.setItem('theme', 'dark');
-    }
-  }
-  
-  // code used to save the users preference theme
-  
-  document.addEventListener('DOMContentLoaded'), () => {
-      const savedTheme = localStorage.getItem('theme');
-      const body = document.body;
-      const button = document.getElementById('theme-toggle');
-
-  }
-  
-  if (savedTheme=== 'dark') {
-    document.body.classList.add('dark-theme');
-    document.getElementById('theme-toggle').textContent = 'Switch to Light Mode';
-  }
-  
-  //Event listener for changes within the theme toggle button
-  
-  document.getElementById('theme-toggle').addEventListener('click', () => {
-    if (document.body.classList.contains('dark-theme')) {
-      localStorage.setItem('theme', 'dark');
-    } else {
-      localStorage.setItem('theme', 'light')
-    }
-  });
-  </script>
    </div>     
   
-
-
-
-
-
-
   <div class="upper-nav">
   <div class="box1">
     <nav>
@@ -146,10 +91,11 @@
 </section>
 
 
-/*#js code for interactive gallery 
+
 
 <script>
 
+// this is for the interactive gallery and is kept in this file because it doesnt function in all.js file 
 // Add this JavaScript to handle the image enlargement and back to normal behavior
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.images img');
@@ -210,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
     </div>
   </footer>
-  
+  <script src="../js/all.js"></script>
 </body>
 </html>
 
