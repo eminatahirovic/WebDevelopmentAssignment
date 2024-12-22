@@ -204,5 +204,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// index section font size changer 
+
+
+
+function myFunction() {
+  document.getElementById("fontSizeExample").style.fontSize = "x-small";
+}
+
 
 

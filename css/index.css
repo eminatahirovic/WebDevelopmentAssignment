@@ -427,6 +427,7 @@ button {
   color: white;
   border-radius: 5px;
   transition: background-color 0.3s;
+border-radius: 5px;
 }
 
 button:hover {
@@ -574,6 +575,7 @@ h1{
 
 #contentToggleSection {
   font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
 }
 
 .giveaway{ 
@@ -603,4 +605,18 @@ h1{
   font-size: small;
  left: 5%;
   text-align: left;
+}
+
+
+.sizeButton {
+  padding: 5px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: #008cba;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.sizeButton:hover {
+  background-color: gray;
 }
