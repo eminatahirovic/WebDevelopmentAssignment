@@ -88,37 +88,6 @@
   </section>
 
 
-  <script>
-
-    // this is for the interactive gallery and is kept in this file because it doesnt function in all.js file 
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        const images = document.querySelectorAll('.images img');
-        const enlargedImageContainer = document.createElement('div');
-        enlargedImageContainer.classList.add('enlarged-image');
-        document.body.appendChild(enlargedImageContainer);
-    
-        const enlargedImage = document.createElement('img');
-        enlargedImageContainer.appendChild(enlargedImage);
-    
-        // wjen the user clicks on the picture this  event enlarges the image
-        images.forEach(image => {
-            image.addEventListener('click', function() {
-                enlargedImage.src = image.src; // this part ssets the source of the enlarged image
-                enlargedImageContainer.classList.add('active'); // enlarged image container shows up 
-            });
-        });
-    
-        // when the user clicks anywhere outside the picture, the site goes back to normal 
-        enlargedImageContainer.addEventListener('click', function(event) {
-            if (event.target === enlargedImageContainer) {
-                enlargedImageContainer.classList.remove('active'); // enlarged image gets hidden
-            }
-        });
-    });
-    </script>
-  
-
   <footer class="footer" id="footer">
     <div class="footer-wrap"> 
       <div class="footer__addr">
@@ -148,5 +117,38 @@
       </div>
     </footer>
     <script src="../js/all.js"></script>
+
+
+    <script>
+
+      // this is for the interactive gallery and is kept in this file because it doesnt function in all.js file 
+      
+      document.addEventListener('DOMContentLoaded', function() {
+          const images = document.querySelectorAll('.images img');
+          const enlargedImageContainer = document.createElement('div');
+          enlargedImageContainer.classList.add('enlarged-image');
+          document.body.appendChild(enlargedImageContainer);
+      
+          const enlargedImage = document.createElement('img');
+          enlargedImageContainer.appendChild(enlargedImage);
+      
+          // wjen the user clicks on the picture this  event enlarges the image
+          images.forEach(image => {
+              image.addEventListener('click', function() {
+                  enlargedImage.src = image.src; // this part ssets the source of the enlarged image
+                  enlargedImageContainer.classList.add('active'); // enlarged image container shows up 
+              });
+          });
+      
+          // when the user clicks anywhere outside the picture, the site goes back to normal 
+          enlargedImageContainer.addEventListener('click', function(event) {
+              if (event.target === enlargedImageContainer) {
+                  enlargedImageContainer.classList.remove('active'); // enlarged image gets hidden
+              }
+          });
+      });
+      </script>
+    
+
 </body>
 </html>

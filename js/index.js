@@ -12,32 +12,10 @@ fetch('../html/questions.json')
   })
   .catch(error => console.error('Error fetching questions:', error));
 
-/*successButton.addEventListener('click', function() {
-  const questionText = userQuestion.value.trim();
-  
-  if (questionText !== '') {
-    const newQuestion = { id: Date.now(), text: questionText };
-    showQuestion(newQuestion);
-    userQuestion.value = '';
-  }
-}); */
-/*
-document.addEventListener('DOMContentLoaded', () => {
-    const successButton = document.getElementById('success');
-    successButton.addEventListener('click', function () {
-      const questionText = userQuestion.value.trim();
-  
-      if (questionText !== '') {
-        const newQuestion = { id: Date.now(), text: questionText };
-        showQuestion(newQuestion);
-        userQuestion.value = '';
-      }
-    });
-  }); */
 
   document.addEventListener('DOMContentLoaded', () => {
     const successButton = document.getElementById('success');
-    const userQuestion = document.getElementById('userQuestion'); // Ensure this is the correct ID
+    const userQuestion = document.getElementById('userQuestion'); // makes sure that the correct id is used
 
     if (successButton && userQuestion) {
         successButton.addEventListener('click', function () {

@@ -8,27 +8,27 @@ jQuery(document).ready(function () {
 
 $(document).ready(function () {
   $('#myForm').on('submit', function (e) {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); // prevent submissiob by default
 
-    // Get the form data
+    // this gets data from the form
     const formData = {
       email: $('#email').val(),
     };
 
     try {
-      // Save the data in localStorage (simulates saving to a file or database)
+      // simulation for a database, sves the data
       const savedData = JSON.parse(localStorage.getItem('formData')) || [];
       savedData.push(formData);
       localStorage.setItem('formData', JSON.stringify(savedData));
 
-      // Show success message
+      // this shows success message
       $('#message')
         .text('Data saved successfully!')
         .css('color', 'green')
-        .fadeIn(); // Use fadeIn for better visibility
-      $('#myForm')[0].reset(); // Reset the form
+        .fadeIn(); 
+      $('#myForm')[0].reset(); // this resets the form
     } catch (error) {
-      // Show error message
+      // this shows error message
       $('#message')
         .text('An error occurred. Please try again.')
         .css('color', 'red')

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // Example JSON data
+  
     const jsonData = [
       {
         "title": "New Year's Eve",
@@ -23,7 +23,7 @@ $(document).ready(function () {
       }
     ];
 
-    // Dynamically populate the table with JSON data
+    // this gets the table content from json file
     let tableBody = $('#nonWorkingDaysTable tbody');
     jsonData.forEach(function (day) {
       let row = `
