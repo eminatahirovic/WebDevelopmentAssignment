@@ -43,6 +43,7 @@
       <li><a href="/html/women's.html" target="_blank">Women's</a></li>
       <li><a href="/html/teens.html" target="_blank">Teens</a></li>
       <li><a href="/html/aboutus.html" target="_blank">About us</a></li>
+      <li><a href="/html/weather.html" target="_blank">Weather</a></li>
     </ol>
 
     <div class="icon">
@@ -64,6 +65,8 @@
 </div>
 
 </div>
+
+ <!-- these are images that appear on the site -->
 
 <section class="section"> 
   <div class="images">
@@ -96,7 +99,7 @@
 <script>
 
 // this is for the interactive gallery and is kept in this file because it doesnt function in all.js file 
-// Add this JavaScript to handle the image enlargement and back to normal behavior
+
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.images img');
     const enlargedImageContainer = document.createElement('div');
@@ -106,24 +109,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const enlargedImage = document.createElement('img');
     enlargedImageContainer.appendChild(enlargedImage);
 
-    // Click event to enlarge the image
+    // wjen the user clicks on the picture this  event enlarges the image
     images.forEach(image => {
         image.addEventListener('click', function() {
-            enlargedImage.src = image.src; // Set the source of the enlarged image
-            enlargedImageContainer.classList.add('active'); // Show the enlarged image container
+            enlargedImage.src = image.src; // this part ssets the source of the enlarged image
+            enlargedImageContainer.classList.add('active'); // enlarged image container shows up 
         });
     });
 
-    // Click anywhere outside the enlarged image to return to normal view
+    // when the user clicks anywhere outside the picture, the site goes back to normal 
     enlargedImageContainer.addEventListener('click', function(event) {
         if (event.target === enlargedImageContainer) {
-            enlargedImageContainer.classList.remove('active'); // Hide the enlarged image
+            enlargedImageContainer.classList.remove('active'); // enlarged image gets hidden
         }
     });
 });
-
-
-
 </script>
 
 
