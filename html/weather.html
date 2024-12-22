@@ -13,8 +13,12 @@
 <body>
 
 
+ <!-- button for theme switching -->
+ <button id="theme-toggle">Switch Theme</button>
+ 
+  
 
-    
+
     <div class="upper-nav">
         <div class="box1">
           <nav>
@@ -77,7 +81,13 @@
 
 </div>
 
-    <script> 
+ <!-- I didn't know how to write the code for API task,
+so I referred to this one and made changes which I wanted for my task.
+ GitHub reference link: https://github.com/AndyUGA/weather_api_html_css_js_project/blob/main/script.js -->
+
+
+
+<script> 
 const apiKey = 'c99f716c4c5a80d88a82465ae65ad323'; 
 
 const weatherContainer = document.getElementById("weather");
@@ -159,9 +169,8 @@ function createWeatherDescription(weatherData) {
     `;
     return description;
 }
-
-
     </script>
+
 
 </div>
 <footer class="footer" id="footer">
@@ -195,7 +204,33 @@ function createWeatherDescription(weatherData) {
   </footer>
 
 
+<script>document.addEventListener('DOMContentLoaded', () => {
+  // this code adds an event listener 
+  const themeToggleBtn = document.getElementById('theme-toggle');
 
+  // this part of the code checks if the button exists
+  if (!themeToggleBtn) {
+      console.error("Theme toggle button not found.");
+      return;
+  }
+
+  // this is supposed to load theme from saved storage but is not saving the theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+      document.body.classList.add(savedTheme);
+  }
+
+  // on button click for the toggle function
+  themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+
+      // this saves the current theme
+      const theme = document.body.classList.contains('dark-theme') ? 'dark-theme' : '';
+      localStorage.setItem('theme', theme);
+
+      console.log("Theme toggled:", theme); // this is for debugging in the console
+  });
+});</script>
 
 
 

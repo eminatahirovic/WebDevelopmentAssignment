@@ -158,11 +158,6 @@ img {
 
 
 
-
-
-
-
-
 /* code for interactive gallery */
 
 body {
@@ -227,3 +222,44 @@ section.dark-theme{
 
 
 
+/* light dark theme testing*/
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --section-bg-color: #f0f0f0;
+  --footer-bg-color: #ffffff;
+  --footer-text-color: #2f2f2f;
+  --button-bg-color: rgb(33, 33, 33, 0.07);
+}
+
+.dark-theme {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --section-bg-color: #333333;
+  --footer-bg-color: #222222;
+  --footer-text-color: #dddddd;
+  --button-bg-color: #555555;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+section {
+  background-color: var(--section-bg-color);
+}
+
+.footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+}
+
+.footer__btn {
+  background-color: var(--button-bg-color);
+}
+
+.item {
+  background-color: var(--section-bg-color);
+}
