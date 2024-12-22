@@ -380,7 +380,7 @@ button:hover {
   padding: 10px;
   font-size: 14px;
   color: white;
-  background-color: none
+  background-color: none;
   border: none;
   border-radius: 8px;
   cursor: pointer;
