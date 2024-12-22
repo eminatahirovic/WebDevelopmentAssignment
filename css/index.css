@@ -549,11 +549,11 @@ h1{
 
 /* read more */
 #ReadMoreSection{
-  border: 1px solid #000000;
-  border-style: ridge;
+  /*border: 1px solid #000000;
+  border-style: ridge; */
   max-width: 45%;
   position: relative;
-  top: -110px;
+  top: -140px;
   font-size: small;
   left: -3%;
 }
@@ -567,37 +567,31 @@ h1{
 #toast-container .toast-success {
   background-color: #28a745;
   color: white;
+  width: fit-content;
+  border: 1px solid;
+  border-style: ridge; 
 }
 
 #toast-container .toast {
   padding: 10px;
   font-size: 16px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 
 
 #contentToggleSection {
   font-family: 'Courier New', Courier, monospace;
-  
- /* border: 1px solid black;
-  border-style: ridge; 
-  
-  top: -18px;
- position: relative;
-  text-align: left;
-  max-width: 40%;
-  left: 5; */
 }
 
 
 .giveaway{ 
   max-width: 45%;
   position: relative;
-  top: -100px;
+  top: -120px;
   font-size: small;
-  border: 1px solid;
-  border-style: ridge;
+   border: 1px solid;
+  border-style: ridge; 
   text-align: left;
   left: -3%;
 }
@@ -608,5 +602,14 @@ h1{
   top: -8px;
   font-size: small;
  left: -4%;
+  text-align: left;
+}
+
+.fullToggleSection { 
+  max-width: 45%;
+  position: relative;
+  top: -8px;
+  font-size: small;
+ left: 5%;
   text-align: left;
 }

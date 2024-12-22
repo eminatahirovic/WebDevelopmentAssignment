@@ -262,12 +262,30 @@ body {
   cursor: pointer;
   padding: 18px;
   width: 50%;
+  text-align: left; 
   border: none;
-  text-align: left;
+  
   outline: none;
   font-size: 15px;
   transition: 0.4s;
   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-left: 25%;
+
+
+}
+
+.accordionTitle {
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .active, .accordion:hover {
@@ -292,14 +310,16 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  margin-left: 25%;
+
 }
-/* Dark Theme */
+/* Dark Theme 
 body.dark-theme {
   background-color: #121212;
   color: #ffffff;
 }
 
-/* Dark theme button */
+/* Dark theme button 
 body.dark-theme button {
   background-color: black;
 }
@@ -316,7 +336,7 @@ button {
 
 button:hover {
   background-color: #006f8b;
-}
+}  */
 
 /*FAQ*/
 .faqQuestion {
@@ -404,3 +424,61 @@ for the non working days table */
   background-color: #f5f5f5;
 }
 
+
+
+
+
+
+
+
+/* light and dark theme test */ 
+/* Light Mode (Default) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #008cba;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #006f8b;
+}
+
+/* Dark Mode */
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-theme button {
+  background-color: #444;
+  color: #ffffff;
+}
+
+.dark-theme a {
+  color: #61dafb; /* Make links visible in dark mode */
+}
+
+.dark-theme h1, 
+.dark-theme h2, 
+.dark-theme h3, 
+.dark-theme h4, 
+.dark-theme h5, 
+.dark-theme h6 {
+  color: #ffffff;
+}
+body.dark-theme {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
