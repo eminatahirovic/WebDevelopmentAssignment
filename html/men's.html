@@ -34,8 +34,10 @@
   
     if (body.classList.contains('dark-theme')) {
       button.textContent = 'Switch to Light Mode';
+      localStorage.setItem('theme', 'dark');
     } else {
       button.textContent = 'Switch to Dark mode';
+      localStorage.setItem('theme', 'dark');
     }
   }
   
@@ -43,6 +45,9 @@
   
   document.addEventListener('DOMContentLoaded'), () => {
       const savedTheme = localStorage.getItem('theme');
+      const body = document.body;
+      const button = document.getElementById('theme-toggle');
+
   }
   
   if (savedTheme=== 'dark') {
