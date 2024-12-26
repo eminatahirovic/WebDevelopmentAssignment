@@ -1,3 +1,16 @@
+:root{
+  --first-color: white;
+  --second-color: black;
+}
+
+body{
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+.container{
+  padding: 40px;
+}
+
 button a {
   text-decoration: none;
 }
@@ -66,7 +79,7 @@ ul li a{
 }
 .list {
     justify-items: center;
-    width: 70%;
+   width: 70%;
     padding-top: 15px;
 }
 
@@ -74,7 +87,8 @@ ul li a{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #007bff;
+ 
+  width: 50px;
 }
 
 .icons i {
@@ -272,8 +286,8 @@ ul {
     display: flex;
     flex-flow: row wrap;
     padding: 30px 30px 20px 30px;
-    color: #2f2f2f;
-    background-color: #fff;
+    
+    
     border-top: 1px solid #e5e5e5;
   }
   
@@ -293,6 +307,7 @@ ul {
 }
   .video-commercial {
     width: 50%;
+    
   }
   
   .footer__logo {
@@ -379,3 +394,219 @@ ul {
   .emailbutton{
     text-decoration: underline;
   }
+
+
+
+
+
+/*light and dark mode testing*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+/*Button Styles */
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #008cba;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+border-radius: 5px;
+}
+
+button:hover {
+  background-color: #006f8b;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Dark theme button */
+body.dark-theme button {
+  background-color: black;
+}
+
+
+/* this is fot the content toggle */
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  /* margin: 20px;
+  padding: 20px; */
+ 
+}
+
+h1{
+  text-align: center;
+}
+
+.toggle-section {
+  margin: 20px 0;
+}
+
+.toggle-btn {
+  background-color: #008cba;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: gray;
+}
+
+.content {
+  display: none; /* this hides content by default */
+  margin-top: 10px;
+  background-color: gray;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width:30%;
+
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  position: relative;
+  display: none;
+}
+
+
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+
+/* read more */
+#ReadMoreSection{
+  /*border: 1px solid #000000;
+  border-style: ridge; */
+  max-width: 45%;
+  position: relative;
+  top: -140px;
+  font-size: small;
+  left: -3%;
+}
+
+
+/* this is for toastr */
+/*toastr*/
+#toast-container .toast-success {
+  background-color: #28a745;
+  color: white;
+  width: fit-content;
+  border: 1px solid;
+  border-style: ridge; 
+}
+
+#toast-container .toast {
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+#contentToggleSection {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+}
+
+.giveaway{ 
+  max-width: 45%;
+  position: relative;
+  top: -120px;
+  font-size: small;
+   border: 1px solid;
+  border-style: ridge; 
+  text-align: left;
+  left: -3%;
+}
+
+.giveawayApplication {
+  max-width: 45%;
+  position: relative;
+  top: -8px;
+  font-size: small;
+ left: -4%;
+  text-align: left;
+}
+
+.fullToggleSection { 
+  max-width: 45%;
+  position: relative;
+  top: -8px;
+  font-size: small;
+ left: 5%;
+  text-align: left;
+}
+
+
+.sizeButton {
+  padding: 5px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: #008cba;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.sizeButton:hover {
+  background-color: gray;
+}

@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="../css/men's.css">
     <link rel="stylesheet" href="../css/mensmedia.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='../css/aboutus.css'>
-</head>
+  </head>
 
 <body>
+ <div>
+  <button id="theme-toggle" onclick="toggleTheme()">SWITCH TO DARK MODE</button>
+ </div>     
 
   <div class="upper-nav">
     <div class="box1">
@@ -41,6 +44,7 @@
           <li><a href="/html/women's.html" target="_blank">Women's</a></li>
           <li><a href="/html/teens.html" target="_blank">Teens</a></li>
           <li><a href="/html/aboutus.html" target="_blank">About us</a></li>
+          <li><a href="/html/weather.html" target="_blank">Weather</a></li>
         </ol>
     
         <div class="icon">
@@ -68,13 +72,12 @@
       <h1>About Us</h1>
     </div>
   
-    <div class="about-us-title">
+    <div class="about-us-title"> 
       <h1>Your Shopping Experience</h1>
     </div>
   </div>
 
-
-  <div class="about-content">
+  <div class="about-content">   <!-- this content is for the first paragraph in the about us page-->
 <div class="intro-text">
       <p>At our store, we strive to provide an exceptional
         shopping experience both online and in person. 
@@ -95,7 +98,7 @@
     
 </div>
     
-    <table class="table table-hover">
+    <table class="table table-hover">  <!-- when the user hovers over the table a slight shadow will appear-->
         <thead>
           <tr>
             <th scope="col">Days of the Week</th>
@@ -112,12 +115,47 @@
             <td>10:00 - 16:00</td>
             <td>CLOSED</td>
           </tr>
-        
         </tbody>
       </table>
 
+      <div class="non-working-container">    <!-- rthis table draws data from json file but looks the same as the other ones -->
+        <h2 class="non-working-title">Non-Working Days</h2>
+        <table id="nonWorkingDaysTable" class="non-working-table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Occasion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- rows for the table are inserted through json data file -->
+          </tbody>
+        </table>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../js/datadriven.js"></script>
+        
 
-      <div class="map">
+
+      </div>
+
+      
+
+      <div class="faqQuestion">     <!-- this is the edit and delete section  -->
+        <h2>Ask a Question</h2> 
+        <form id="questionForm" autocomplete="off">
+          <input
+            type="text"
+            id="userQuestion"
+            name="userQuestion"
+            placeholder="Type your question here..."
+            required
+          />
+          <button type="button" id="success">Ask</button>
+        </form>
+        <div id="questionsContainer"></div>
+      </div>
+
+      <div class="map">     <!-- map embedded from google maps  -->
         <h3>Find us here!</h3>
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.0206964323756!2d18.408114899999998!3d43.8553997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c8df25ac110b%3A0xb1cd13f8b38c755a!2sSCC%20-%20Sarajevo%20City%20Center!5e0!3m2!1sen!2sba!4v1731602376894!5m2!1sen!2sba" 
@@ -132,6 +170,34 @@
   </div>
 </div>
 </section>
+
+
+
+<div class="accordionMenu">
+
+<div class="accordionTitle">
+ <h2>Details You May Find Useful</h2> 
+</div>
+
+
+<button class="accordion">How can I find a specific product category?</button>
+<div class="panel">
+ <p>Use the navigation menu at the top of the page or the search bar to locate your desired category.</p>
+</div>
+
+<button class="accordion">What age groups do your kids’ clothing cover?</button>
+<div class="panel">
+ <p>Our kids’ collection includes clothing for toddlers (1-3 years) and children (4-12 years).</p> 
+</div>
+
+<button class="accordion">Do you have seasonal clothing collections?</button>
+<div class="panel">
+ <p>Yes, we offer collections for summer, winter, spring, and fall, including holiday specials.</p>
+</div>
+</div>
+
+
+
 
 <footer class="footer" id="footer">
   <div class="footer-wrap"> 
@@ -161,6 +227,9 @@
     </div>
     </div>
   </footer>
+  <script src="../js/index.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../js/all.js"></script>
 
 </body>
 </html>

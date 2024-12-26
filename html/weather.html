@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/weather.css">
+    <title>Weather API</title>
+</head>
+
+
+
+<body>
+
+
+ <!-- button for theme switching -->
+ <button id="theme-toggle">Switch Theme</button>
+ 
+  
+
+
+    <div class="upper-nav">
+        <div class="box1">
+          <nav>
+             <ul>
+                <li><a href="">USD</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+                <li><a href="">English</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+                <li><a href="login.html">My Account</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+            </ul> 
+                
+          </nav>
+           <h5 class="free-shipping">Free shipping on all orders over $100</h5>
+        </div>
+      
+        <div class="subbox">
+          <div class="background">
+              <h2 class="shopping-web">Shopping Website</h2>
+          </div>
+      
+          <div class="list">
+              <ol>
+                  <li><a href="/html/index.html" target="_blank">Home</a></li>
+                  <li><a href="/html/men's.html" target="_blank">Men's</a></li>
+                  <li><a href="/html/women's.html" target="_blank">Women's</a></li>
+                  <li><a href="/html/teens.html" target="_blank">Teens</a></li>
+                  <li><a href="/html/aboutus.html" target="_blank">About us</a></li>
+                  <li><a href="/html/weather.html" target="_blank">Weather</a></li>
+              </ol>
+          </div>
+      
+          <div class="icons">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </div>
+        </div>      
+      
+
+
+
+
+
+
+
+    <div class="titleforweather">
+        <h2>Know the Weather, Know What to Shop – Seasonal Shopping Made Easy!</h2>
+    </div>
+
+
+
+    <div class="weatherInput">
+
+  
+    <input type="text" id="cityInput" name="cityInput" placeholder="Input City" />
+    <button onclick="fetchWeather()">
+        Submit
+    </button>
+    <h5 id="error"></h5>
+    <h3 id="city"></h3>
+    <div id="weather"></div>
+
+</div>
+
+
+</div>
+<footer class="footer" id="footer">
+  <div class="footer-wrap"> 
+    <div class="footer__addr">
+      <h1 class="footer__logo">Thank you for visiting SHOPPING WEBSITE! <hr> Emina Tahirović <hr> Introduction to Web Development <hr></h1> 
+          
+      <h2>Contact 033-122-122</h2>
+      
+      <address>
+        Vrbanja 1, Sarajevo 71000<br>
+            
+        <a class="footer__btn" href="mailto:example@gmail.com" target="_blank">Email Us</a>
+      </address>
+    </div>
+
+    <div class="video-commercial" width="420" height="315s">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/fr9iyP3Dy5A?si=zNF3Svmh2clsjxAD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+   
+  </div>
+
+  <div class="footer-b">
+    <div class="legal">
+      <p>&copy; 2024 All rights reserved.</p>
+    </div>
+    <div class="professoremail">
+      <a class="emailbutton" href="mailto:amela.vatres@stu.ibu.edu.ba" target="_blank">Email prof. Amela Vatreš Mudželet</a>
+    </div>
+    </div>
+  </footer>
+
+
+<script>document.addEventListener('DOMContentLoaded', () => {
+  // this code adds an event listener 
+  const themeToggleBtn = document.getElementById('theme-toggle');
+
+  // this part of the code checks if the button exists
+  if (!themeToggleBtn) {
+      console.error("Theme toggle button not found.");
+      return;
+  }
+
+  // this is supposed to load theme from saved storage but is not saving the theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+      document.body.classList.add(savedTheme);
+  }
+
+  // on button click for the toggle function
+  themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+
+      // this saves the current theme
+      const theme = document.body.classList.contains('dark-theme') ? 'dark-theme' : '';
+      localStorage.setItem('theme', theme);
+
+      console.log("Theme toggled:", theme); // this is for debugging in the console
+  });
+});</script>
+
+
+
+ <!-- I didn't know how to write the code for API task,
+so I referred to this one and made changes which I wanted for my task.
+ GitHub reference link: https://github.com/AndyUGA/weather_api_html_css_js_project/blob/main/script.js -->
+
+
+
+ <script> 
+  const apiKey = 'c99f716c4c5a80d88a82465ae65ad323'; 
+  
+  const weatherContainer = document.getElementById("weather");
+  const city = document.getElementById("city");
+  const error = document.getElementById('error');
+  
+  const units = 'metric'; 
+  let temperatureSymobol = units == 'metric' ? "°C" : "°F";
+  
+  
+  
+  async function fetchWeather() {
+  try {
+      weatherContainer.innerHTML = '';
+      error.innerHTML = '';
+      city.innerHTML = '';
+  
+      const cnt = 10;
+      const cityInputtedByUser = document.getElementById('cityInput').value;
+  
+      const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityInputtedByUser}&appid=${apiKey}&units=${units}&cnt=${cnt}`;
+  
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+  
+      // Log the response to see the structure of the data
+      console.log(data);
+  
+      // Display error if user types invalid city or no city
+      if (data.cod == '400' || data.cod == '404') {
+          error.innerHTML = `Not valid city. Please input another city`;
+          return;
+      }
+  
+      // Check if data.list exists before calling forEach
+      if (data.list) {
+          data.list.forEach(hourlyWeatherData => {
+              const hourlyWeatherDataDiv = createWeatherDescription(hourlyWeatherData);
+              weatherContainer.appendChild(hourlyWeatherDataDiv);
+          });
+      } else {
+          error.innerHTML = "Weather data unavailable.";
+      }
+  
+      // Display city name based on latitude and longitude
+      city.innerHTML = `Hourly Weather for ${data.city.name}`;
+  } catch (error) {
+      console.log(error);
+  }
+  }
+  
+  
+  function convertToLocalTime(dt) {
+      // Create a new Date object by multiplying the Unix timestamp by 1000 to convert it to milliseconds
+      // Will produce a time in the local timezone of user's computer
+      const date = new Date(dt * 1000);
+  
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based, so add 1
+      const day = String(date.getDate()).padStart(2, '0');
+      const hours = String(date.getHours() % 12 || 12).padStart(2, '0'); // Convert 24-hour to 12-hour format
+      const minutes = String(date.getMinutes()).padStart(2, '0');
+      const seconds = String(date.getSeconds()).padStart(2, '0');
+      const period = date.getHours() >= 12 ? 'PM' : 'AM'; // Determine AM/PM
+  
+      // Formatted date string in the format: YYYY-MM-DD hh:mm:ss AM/PM
+      return `${year}-${month}-${day} ${hours}:${minutes}:${seconds} ${period}`;
+  }
+  
+  function createWeatherDescription(weatherData) {
+      const { main, dt } = weatherData;
+  
+      const description = document.createElement("div");
+      const convertedDateAndTime = convertToLocalTime(dt);
+  
+      // '2023-11-07 07:00:00 PM'
+      description.innerHTML = `
+          <div class="weather_description">${main.temp}${temperatureSymobol} - ${convertedDateAndTime.substring(10)} - ${convertedDateAndTime.substring(5, 10)}</div>
+      `;
+      return description;
+  }
+      </script>
+  
+
+
+
+</body>
+</html>
+
