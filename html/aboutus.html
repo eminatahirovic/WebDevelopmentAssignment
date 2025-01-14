@@ -19,51 +19,54 @@
   <button id="theme-toggle" onclick="toggleTheme()">SWITCH TO DARK MODE</button>
  </div>     
 
-  <div class="upper-nav">
-    <div class="box1">
-      <nav>
-         <ul>
-            <li><a href="">USD</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
-            <li><a href="">English</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
-            <li><a href="login.html">My Account</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
-        </ul> 
-            
-      </nav>
-       <h5 class="free-shipping">Free shipping on all orders over $100</h5>
-    </div>
   
-    <div class="subbox">
-        <div class="background">
-            <h2 class="shopping-web">Shopping Website</h2>
-        </div>
-    
-        <div class="list">
-        <ol>
-          <li><a href="/html/index.html" target="_blank">Home</a></li>
-          <li><a href="/html/men's.html" target="_blank">Men's</a></li>
-          <li><a href="/html/women's.html" target="_blank">Women's</a></li>
-          <li><a href="/html/teens.html" target="_blank">Teens</a></li>
-          <li><a href="/html/aboutus.html" target="_blank">About us</a></li>
-          <li><a href="/html/weather.html" target="_blank">Weather</a></li>
-        </ol>
-    
+ <div class="upper-nav">
+  <div class="box1">
+    <nav>
+       <ul>
+          <li><a href="">USD</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+          <li><a href="">English</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+          <li><a href="login.html">My Account</a><i class="fa fa-angle-down" aria-hidden="true"></i></li></li>
+      </ul> 
+          
+    </nav>
+     <h5 class="free-shipping">Free shipping on all orders over $100</h5>
+  </div>
+
+  <div class="subbox">
+    <div class="background">
+        <h2 class="shopping-web">Shopping Website</h2>
+    </div>
+
+    <div class="list">
+    <ol>
+      <li><a href="/html/index.html" target="_blank">Home</a></li>
+      <li><a href="/html/men's.html" target="_blank">Men's</a></li>
+      <li><a href="/html/women's.html" target="_blank">Women's</a></li>
+      <li><a href="/html/teens.html" target="_blank">Teens</a></li>
+      <li><a href="/html/aboutus.html" target="_blank">About us</a></li>
+      <li><a href="/html/weather.html" target="_blank">Weather</a></li>
+    </ol>
+
+    <div class="icon">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <i class="fa fa-user" aria-hidden="true"></i>
+
         <div class="icon">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <i class="fa fa-user" aria-hidden="true"></i>
-    
-            <div class="icon">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </div>
-    
-            <div class="cover">
-                <img src="" alt="">
-    
-            </div>
-          </div>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </div>
+
+        <div class="cover">
+            <img src="" alt="">
+
         </div>
       </div>
-  
+    </div>
   </div>
+
+</div>
+
+</div>
 
 <section>
   <div class="full-wrap">
@@ -110,7 +113,7 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">Working Hours</th>
+            <th scope="row">Working Hours</th> <!--<th> (table header) -->
             <td>10:00 - 18:00</td>
             <td>10:00 - 16:00</td>
             <td>CLOSED</td>
@@ -147,13 +150,15 @@
             type="text"
             id="userQuestion"
             name="userQuestion"
-            placeholder="Type your question here..."
+            placeholder="Type your question here..."  
             required
           />
           <button type="button" id="success">Ask</button>
         </form>
         <div id="questionsContainer"></div>
       </div>
+<!-- placeholder used to display temporary text inside an <input> or <textarea> element-->
+
 
       <div class="map">     <!-- map embedded from google maps  -->
         <h3>Find us here!</h3>

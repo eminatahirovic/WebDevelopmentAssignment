@@ -26,10 +26,10 @@
 
 
  <div>
-  <button id="theme-toggle" onclick="toggleTheme()">SWITCH TO DARK MODE</button>
+  <button id="theme-toggle" onclick="toggleTheme()">SWITCH TO DARK MODE!</button>
 </div>
 
-    
+   
 <div class="upper-nav">
   <div class="box1">
     <nav>
@@ -49,24 +49,35 @@
     </div>
 
     <div class="list">
-        <ol>
-            <li><a href="/html/index.html" target="_blank">Home</a></li>
-            <li><a href="/html/men's.html" target="_blank">Men's</a></li>
-            <li><a href="/html/women's.html" target="_blank">Women's</a></li>
-            <li><a href="/html/teens.html" target="_blank">Teens</a></li>
-            <li><a href="/html/aboutus.html" target="_blank">About us</a></li>
-            <li><a href="/html/weather.html" target="_blank">Weather</a></li>
-        </ol>
-    </div>
+    <ol>
+      <li><a href="/html/index.html" target="_blank">Home</a></li>
+      <li><a href="/html/men's.html" target="_blank">Men's</a></li>
+      <li><a href="/html/women's.html" target="_blank">Women's</a></li>
+      <li><a href="/html/teens.html" target="_blank">Teens</a></li>
+      <li><a href="/html/aboutus.html" target="_blank">About us</a></li>
+      <li><a href="/html/weather.html" target="_blank">Weather</a></li>
+    </ol>
 
-    <div class="icons">
-        <i class="fa fa-search" aria-hidden="true"></i>    <!-- this is for the icons on the top  -->
-        <i class="fa fa-user" aria-hidden="true"></i>
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-    </div>
-  </div>      
+    <div class="icon">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <i class="fa fa-user" aria-hidden="true"></i>
 
-    
+        <div class="icon">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <!--Hiding decorative elements or duplicate content. this is for aria-->
+        </div>
+
+        <div class="cover">
+            <img src="" alt="">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+  
 
         <div class="text">    <!-- for some reason this doesnt show up but the html and css codes exit-->
           <div class="container mt-3">
@@ -147,7 +158,8 @@
           
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal"> <!--automatically closes 
+                    the modal when the associated element is clicked, without requiring additional JavaScript code-->
                     <a href="login.html">
                     Let's go!
                     </a>
@@ -192,7 +204,9 @@
       </div>
 
       <div class="toggle-section">
-        <button class="toggle-btn" onclick="toggleContent('content3')">Can I track my order?</button>
+        <button class="toggle-btn" onclick="toggleContent('content3')">Can I track my order?</button> <!-- This is an event attribute in HTML that 
+        specifies JavaScript code to be executed when the button is clicked.
+         the event triggers the JavaScript function toggleContent.-->
         <div class="content" id="content3">
             <p>Yes, once your order is shipped, you will receive a tracking number via email.</p>
         </div>
@@ -227,7 +241,9 @@
               <p>&copy; 2024 All rights reserved.</p>
             </div>
             <div class="professoremail">
-              <a class="emailbutton" href="mailto:amela.vatres@stu.ibu.edu.ba" target="_blank">Email prof. Amela Vatreš Mudželet</a>
+              <a class="emailbutton" href="mailto:amela.vatres@stu.ibu.edu.ba" target="_blank">Email prof. Amela Vatreš Mudželet</a> 
+          <!--  target="_blank": Tells the browser to open the linked page in a new tab or window.-->
+          
             </div>
             </div>
           </footer>
@@ -245,5 +261,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </body>
 </html>
-
 

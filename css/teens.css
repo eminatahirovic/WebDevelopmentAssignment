@@ -215,9 +215,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
+  z-index: 1000; /* odredjuje redoslijed elemenata na stranici*/
+  opacity: 0; /* koristi za postavljanje prozirnosti (transparentnosti) elementa*/
+  pointer-events: none; /* element neće odgovarati na nikakve interakcije mišem*/
   transition: opacity 0.3s ease;
 }
 
